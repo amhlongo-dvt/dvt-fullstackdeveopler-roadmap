@@ -129,3 +129,23 @@ nav h1 [class*="fa-"]{
     font-size: 100%;
     color: var(--aqua);
 }
+
+.button {
+    background-color: var(--magenta);
+    color: white;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+@media (min-width: 850px) {
+    nav {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    nav li:first-child {
+        flex-basis: auto;
+        text-align: left;
+        margin-right: auto;
+    }
+}
