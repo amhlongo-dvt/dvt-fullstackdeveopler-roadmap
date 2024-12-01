@@ -42,6 +42,10 @@ a:hover {
     text-decoration: none;
 }
 
+img {
+    width: 100%;
+}
+
 .section-plum {
     background-color: var(--plum);
 }
@@ -216,7 +220,21 @@ footer ul {
     line-height: 1.5;
 }
 
+@media (min-width: 550px){
+    article {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+    .text {
+        order: 1;
+        text-align: right;
+    }
 
+    #projects ul {
+        justify-content: flex-end;
+    }
+}
 
 
 @media (min-width: 850px) {
