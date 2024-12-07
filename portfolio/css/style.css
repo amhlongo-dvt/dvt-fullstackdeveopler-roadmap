@@ -1,10 +1,10 @@
 :root {
-    --black: #171321;
-    --dkblue: #0d314b;
-    --plum: #4b0d49;
-    --hotmag: #ff17e4;
-    --magenta: #e310cb;
-    --aqua: #86fbfb;
+    --black: #1c1d18;
+    --dkblue: #03A696;
+    --plum: #253659;
+    --hotmag: #03A696;
+    --magenta: #F27457;
+    --aqua: #BF665E;
     --white: #f7f8fa;
     --font-size: 1.3rem;
     --mono: "Oxygen mono", monospace;
@@ -53,10 +53,11 @@ img {
 .section-dkblue {
     background-color: var(--dkblue);
 }
-
 .section-blue {
-    background-color: var(--black);
+    background-color: var(--plum);
 }
+
+
 
 .gradient {
     background: linear-gradient(90deg, rgba(46,1,24,1) 0%, rgba(255,23,228,1) 35%, rgba(134,251,251,1) 100%);
@@ -164,6 +165,8 @@ nav h1 [class*="fa-"]{
 }
 
 footer {
+
+    margin-top: 2rem;
     text-align: center;
 }
 
@@ -222,7 +225,7 @@ footer ul {
 
 #about h2 {
     font-size: 2.5rem;
-    margin-bottom: calc(2.5rem*0.5);
+    margin-bottom: calc(2.5rem*0.1);
 }
 
 #about h3 {
@@ -247,11 +250,13 @@ footer ul {
 }
 
 #about img {
-    margin: 4rem 2 4rem 0;
+    margin: 4rem 0 4rem 0;
     border-left: 1px solid var(--aqua);
     border-top: 1px solid var(--aqua);
-    border-radius: 25px;
+    border-radius: 250px;
     padding: 1rem;
+    height: 18rem;
+    width: 18rem;
 }
 
 .blackbox {
@@ -275,7 +280,7 @@ footer ul {
       grid-row: 1/2;
     }
     .text {
-      grid-column: 5/11;
+      grid-column: 8/11;
       grid-row: 1/2;
       order: 2;
       text-align: right;
@@ -297,31 +302,20 @@ footer ul {
     }
 
     #about img {
-        grid-column: 1/6;
+        grid-column: 2/10;
         grid-row: 1/2;
-      }
-      .text {
-        grid-column: 5/11;
-        grid-row: 1/2;
-        order: 2;
-        text-align: right;
-      }
-      #about ul {
-        justify-content: flex-end;
-      }
-      #about .reverse  .text {
-        grid-column: 1/7;
-        order: 2;
-        text-align: left;
-      }
-      #about .reverse img {
-        grid-column: 6/11;
-        grid-row: 1/2;
-      }
-      #about .reverse ul {
-        justify-content: flex-start;
-      }
+    }
+    .text {
+    grid-column: 4/10;
+    grid-row: 1/2;
+    order: 2;
+    text-align: right;
+    }
+    #about ul {
+    justify-content: flex-end;
+    }
     
+
   }
 
 @media (min-width: 850px) {
