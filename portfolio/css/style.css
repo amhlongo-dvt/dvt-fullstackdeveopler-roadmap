@@ -113,7 +113,11 @@ nav {
     font-size: 80%;
     padding: 1rem;
 }
-
+.fix {
+    position: fixed;
+    width: 100%;
+    background-color: var(--black);
+}
 nav h1 a {
     font-family: var(--sans);
 }
@@ -320,7 +324,7 @@ footer ul {
 
 @media (min-width: 850px) {
     nav {
-        max-width: 1200px;
+        /* max-width: 1200px; */
         margin: 0 auto;
     }
 
