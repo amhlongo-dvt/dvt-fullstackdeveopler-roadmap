@@ -1,6 +1,6 @@
 :root {
     --black: #1c1d18;
-    --dkblue: #03A696;
+    --dkblue: #03a696a0;
     --plum: #253659;
     --hotmag: #03A696;
     --magenta: #F27457;
@@ -60,7 +60,7 @@ img {
 
 
 .gradient {
-    background: linear-gradient(90deg, rgba(46,1,24,1) 0%, rgba(255,23,228,1) 35%, rgba(134,251,251,1) 100%);
+    background: linear-gradient(90deg, var(--black) 0%, var(--magenta) 35%, var(--dkblue) 100%);
     height: 1px;
 }
 
