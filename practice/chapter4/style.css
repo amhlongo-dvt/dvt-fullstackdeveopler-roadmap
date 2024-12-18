@@ -43,3 +43,20 @@ body {
     margin-inline-start: auto;
 }
 
+.title {
+    padding: 1.5em;
+    background-color: #fff;
+}
+
+.flex {
+    display: flex;
+    margin-left: auto;
+    gap: var(--gap-size);
+}
+
+.column-main {
+    flex: 2;
+}
+.column-sidebar {
+    flex: 1;    
+}
