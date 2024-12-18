@@ -59,4 +59,32 @@ body {
 }
 .column-sidebar {
     flex: 1;    
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-size);
+}
+
+.column-sidebar > .title {
+    flex: 1;
+}
+
+.login-form h3 {
+    margin: 0;
+    font-size: 0.9em;
+    font-weight: bold;
+    text-align: end;
+    text-transform: uppercase;
+}
+
+
+.login-form input:not([type=checkbox] :not([type=radio])) {
+    display: block;
+    inline-size: 100%;
+}
+
+.login-form button {
+    margin-block-start: 1em;
+    border: 1px solid #cc6b5a;
+    background-color: white;
+    cursor: pointer;
 }
