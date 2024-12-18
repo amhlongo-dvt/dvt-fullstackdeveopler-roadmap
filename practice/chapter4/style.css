@@ -9,7 +9,7 @@
 }
 
 body {
-    margin: unset;
+    margin: 0.5em;
     background-color: #709b90;
     font-family: Helvetica, Arial, sans-serif;
 }
@@ -87,4 +87,36 @@ body {
     border: 1px solid #cc6b5a;
     background-color: white;
     cursor: pointer;
+}
+
+.centered {
+    text-align: center;
+}
+
+.cost {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 0.7;
+}
+
+.cost-currency {
+    font-size: 2em;
+}
+
+.cost-dollars {
+    font-size: 4em;
+}
+
+.cost-cents {
+    font-size: 1.5em;
+    align-self: flex-start;
+}
+
+.cta-button {
+    display: block;
+    background-color: #cc6b5a;
+    color: white;
+    padding: 0.5em 1em;
+    text-decoration: none;
 }
