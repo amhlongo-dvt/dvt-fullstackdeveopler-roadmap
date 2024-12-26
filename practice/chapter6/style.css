@@ -25,9 +25,24 @@ button {
 }
 
 .container {
+    display: flex;
     width: 80%;
     max-inline-size: 1000px;
     margin: 1em auto;
+    min-height: 100vh;
+}
+
+.col-main {
+    flex: 1 80%;
+}
+
+.col-sidebar{
+    flex: 20%;
+}
+
+.affix{
+    position: sticky;
+    top: 1em;
 }
 
 .modal {

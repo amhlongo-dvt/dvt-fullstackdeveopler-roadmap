@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module">
+        var button = document.getElementById('toggle-menu');
+        button.addEventListener('click', function(event){
+            event.preventDefault();
+            var menu = document.getElementById('main-menu')
+            menu.classList.toggle('is-open');
+        })
+    </script>
+</head>
+<body>
+    <header id="header" class="page-header">
+        <div class="title">
+            <h1>Wombat Coffee Roasters</h1>
+            <div class="slogan">We love coffee</div>
+        </div>
+    </header>
+
+    <nav class="menu" id="main-menu">
+        <button class="menu-toggle" id="toggle-menu">
+            toggle menu
+        </button>
+        <div class="menu-dropdown">
+            <ul class="nav-menu">
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/shop.html">Shop</a></li>
+                <li><a href="/menu.html">Menu</a></li>
+                <li><a href="/brew.html">Brew</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <aside id="hero" class="hero">
+        Welcome to Wombat Coffee Roasters! We are 
+        passionate about our craft, striving to bring you
+        the best hand-crafted coffee in the city.
+    </aside>
+
+    <main class="main">
+        <section class="column">
+            <h2 class="subtitle">Single Origin</h2>
+            <p>We have built partnerships with small farms
+                around the world to hand-select beans at the 
+                peak of the season. We then carefully roast in
+                <a href="/batch-size.html">small batches</a> to 
+                maximize thier potential
+            </p>
+        </section>
+        <section class="column">
+            <h2 class="subtitle">Single Origin</h2>
+            <p>We have built partnerships with small farms
+                around the world to hand-select beans at the 
+                peak of the season. We then carefully roast in
+                <a href="/batch-size.html">small batches</a> to 
+                maximize thier potential
+            </p>
+        </section>
+        <section class="column">
+            <h2 class="subtitle">Single Origin</h2>
+            <p>We have built partnerships with small farms
+                around the world to hand-select beans at the 
+                peak of the season. We then carefully roast in
+                <a href="/batch-size.html">small batches</a> to 
+                maximize thier potential
+            </p>
+        </section>
+    </main>
+</body>
+</html>
