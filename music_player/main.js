@@ -43,3 +43,43 @@ let track_list = [
     },
 
 ]
+
+function resetValues(){
+    curr_time.textContent = "00:00";
+    total_duration.textContent = "00:00";
+    seek_slider.value = 0;
+}
+
+function random_bg_color() {
+    let red = Math.floor(Math.random() * 256) + 64;
+    let green = Math.floor(Math.random() * 256) + 64;
+    let blue = Math.floor(Math.random() * 256) + 64;
+
+    let bgColor = "rgb(" + red + "," + green + "," + blue + ")";
+    document.body.style.background = bgColor
+}
+
+
+
+// To load the track
+function loadTrack(track_index){
+    clearInterval(updateTimer);
+    resetValues();
+
+    current_song = track_list[track_index];
+    curr_track.src = current_song.path;
+    curr_time.load();
+
+    track_art.computedStyleMap.backgroundImage = "url(" + current_song.image + ")";
+    track_name.textContent = current_song.name;
+    track_name.textContent  = current_song.artist;
+    now_playing.textContent = "PLAYING " + (track_index+1) + "OF" + track_list.length;
+
+
+    updateTimer = setInterval(seekUpdate, 1000)
+
+    curr_track.addEventListener("ended", nextTrack)
+
+    random_bg_color()
+}
+
