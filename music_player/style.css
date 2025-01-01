@@ -1,5 +1,6 @@
 body {
     background-color: lightgreen;
+    font-family: Helvetica , Arial , sans-serif;
 }
 
 .player {
@@ -27,6 +28,19 @@ body {
     background-position: center;
     border-radius: 5%;
 }
+
+.now-playing {
+    font-size: 1rem;
+}
+
+.track-name {
+    font-size: 3rem;
+}
+
+.track-artist {
+    font-size: 1.5rem;
+}
+
 
 
 
