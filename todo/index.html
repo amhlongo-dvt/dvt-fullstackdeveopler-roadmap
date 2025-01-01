@@ -7,47 +7,28 @@
 </head>
 <body>
     <header>
-        <h2>Todo</h2>
+        <h2 class="header-title">Todo</h2>
     </header>
     <main>
-        <div>
-            <label for="title">Title</label>
-            <input id="title" type="text">
-            <label for="description">Description</label>
-            <input id="title" type="text">
-            <button>Add</button>
-        </div>
-        <div>
-            <h3>
-                Cooking
-            </h3>
-            <p>Make a portabelini mushroom</p>
-            <div>
-                <button>Edit</button>
-                <button>Done</button>
+        <form class="form">
+            <label for="title" class="title-label">Title</label>
+            <input id="title" class="title-input" type="text">
+            <label for="description" class="description-label">Description</label>
+            <input id="title" class="title_input" type="text">
+            <button class="add-btn">Add</button>
+        </form>
+        <div class="task-container" id="container">
+            <div class="task">
+                <h3 class="task-title">
+                    Cooking
+                </h3>
+                <p class="task-description">Make a portabelini mushroom</p>
+                <div class="btn-container">
+                    <button class="edit-btn">Edit</button>
+                    <button class="done-btn">Done</button>
+                </div>
             </div>
         </div>
-        <div>
-            <h3>
-                Cooking
-            </h3>
-            <p>Make a portabelini mushroom</p>
-            <div>
-                <button>Edit</button>
-                <button>Done</button>
-            </div>
-        </div>
-        <div>
-            <h3>
-                Cooking
-            </h3>
-            <p>Make a portabelini mushroom</p>
-            <div>
-                <button>Edit</button>
-                <button>Done</button>
-            </div>
-        </div>
-
     </main>
     <footer></footer>
 </body>
