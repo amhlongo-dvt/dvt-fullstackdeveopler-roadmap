@@ -21,5 +21,30 @@ body {
     align-items: center;
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+    min-width: 100px;
+}
+
+label {
+    margin-top: 1em;
+}
+
+textarea{
+    background-color: antiquewhite;
+    min-width:100px;
+}
+
+/* form > * + * {
+    margin-block-start: 0.2em;
+} */
+
+.add-btn {
+    margin-top: 1.5em;
+}
+
+
+
 
 
