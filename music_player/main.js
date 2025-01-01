@@ -83,3 +83,43 @@ function loadTrack(track_index){
     random_bg_color()
 }
 
+
+function playTrack(){
+    curr_track.play();
+    isPlaying = true;
+
+    play_btn.innerHTML = '<i class="fa fa-play-circle fa-5x"></i>';
+}
+
+function pauseTrack(){
+    curr_track.pause();
+    isPlaying = false;
+
+    play_btn.innerHTML = '<i class="fa fa-pause-circle fa-5x"></i>';
+}
+
+function playpauseTrack(){
+    if(!isPlaying) playTrack();
+    else pauseTrack();
+}
+
+function nextTrack(){
+    if (track_index < track_list.length - 1)
+        track_index += 1;
+    else track_index = 0
+
+    loadTrack(track_index)
+    playTrack()
+}
+
+function prevTrack(){
+    if (track_index > 0)
+        track_index -= 1;
+    else track_index = track_list - 1
+
+    loadTrack(track_index)
+    playTrack()
+}
+
+
+
