@@ -1,0 +1,110 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+:root{
+    --brand-color: #0072b0;
+    --positive-color: rgb(46, 163, 46);
+    --column-width: 1080px;
+}
+
+body {
+    /* margin: unset; */
+    background-color: #eee;
+    font-family: Helvetica , Arial , sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;    
+}
+
+header {
+    color: white;
+    text-align: center;
+    background-color: var(--brand-color);
+}
+
+form {
+    margin-block-start: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 1em;
+}
+
+ 
+textarea{
+    margin: 0;
+    border-radius: 5%;
+    background-color: antiquewhite;
+}
+
+
+
+.add-btn {
+    padding: 0.5em 1.5em;
+    margin-block-start: 1.5em;
+    border: 1px solid #cc6b5a;
+    background-color: white;
+    cursor: pointer;    
+    /* width: 4em; */
+    height: 2em;
+    justify-content: center;
+    text-align: center;
+    align-self: center;
+}
+
+
+
+.task-container {
+    margin-block-start: 1.5em;
+    display: flex;
+    flex-direction: column;
+    /* gap: 1em; */
+}
+
+.task {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid;
+    padding-block-end: 1em;
+}
+
+
+
+.task-title {
+    /* background-color: #0072b0; */
+    /* text-align: center; */
+    margin-block: 0;
+    margin-block-start: 1em;
+}
+
+.task-description {
+    /* text-align: center; */
+    font-size: 0.8em;
+    margin-block: 0;
+}
+
+.btn-container {
+    align-self:  flex-end;
+}
+
+.edit-btn{
+    background-color: green;
+    color: white;
+    border: transparent;
+    cursor: pointer;
+}
+
+.done-btn{
+    background-color: red;
+    color: white;
+    border: transparent;
+    cursor: pointer;
+}
+

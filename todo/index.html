@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-DO</title>
-    <link rel="stylesheet" href="style.css" type="text/css">
+     <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body>
     <header>
@@ -12,18 +12,30 @@
     </header>
     <main>
         <form>
-            <label for="title" class="title-label">Title</label>
-            <input id="title" class="title-input" type="text">
-            <label for="description" class="description-label">Description</label>
-            <input id="title" class="title_input" type="text">
-            <button class="add-btn">Add</button>
+        
+                <label for="title" class="title-label">Title</label>
+                <input id="title" class="title-input" type="text">
+            
+        
+                <label for="description" class="description-label">Description</label>
+                <textarea id="description" class="description-input" type="text" ></textarea>
+            
+      
+                <button class="add-btn">Add</button>
+            
         </form>
         <div class="task-container" id="container">
             <div class="task">
-                <h3 class="task-title">
-                    Cooking
-                </h3>
+                <h3 class="task-title">Cooking</h3>
                 <p class="task-description">Make a portabelini mushroom</p>
+                <div class="btn-container">
+                    <button class="edit-btn">Edit</button>
+                    <button class="done-btn">Done</button>
+                </div>
+            </div>
+            <div class="task">
+                <h3 class="task-title">Cooking</h3>
+                <p class="task-description">Make a portabelini mushroom </p>
                 <div class="btn-container">
                     <button class="edit-btn">Edit</button>
                     <button class="done-btn">Done</button>
