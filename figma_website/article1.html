@@ -21,11 +21,86 @@
         </ul>
     </nav>
     <header>
+        <span class="tag">Amazon Web Services</span>
         <h1 class="article-title">Deploy to ECS with Fargate using Terraform</h1>
-        <p class="article-subtitle">Frontend, Backend, DevOps and everything in between.</p>
+        <p class="article-subtitle">November 3, 2023</p>
     </header>
-    <main class="main">
+    <main class="main-article">
+        <p>“Everything can be code if you are brave enough”</p>
+        <p>This was the mantra that I said to myself when 
+            I decided to take the leap into IaC. I previously 
+            gathered some experience within the
+            AWS world on how to run a web application 
+            (both simple S3 hosting and with ECS), 
+            but it was always “clicked together” manually.
+        </p>
+        <p>So the next natural step in evolution 
+            would be to build the infrastructure 
+            with the help of code, 
+            and Terraform seemed like the way to go.
+        </p>
+        <p>As doing this without a clear purpose would only 
+            be half the fun, a small internal project
+             became the starting point for my foray into 
+             the world of IaC.</p>
+        <p>
+            The project in question was the automatic generation 
+            of business cards for finleap employees, 
+            without the need to have a designer create the 
+            print-ready PDF.
+        </p>
+        <p>
+            This article will not focus on the application itself -
+             but as a side note: It’s a simple Node.js server based on express, 
+             serving a React application, both bundled together in a Docker container.
+        </p>
+
+        <h2> The Target Setup</h2>
+
+        <p>
+            After some research about best practices on 
+            how to serve a dockerized application with ECS,
+             this was the setup I was aiming for:
+        </p>
+        <img src="image1.png" alt="">
+        <p>
+            So the Docker container would be run in a Fargate
+             task as I didn’t want to manage the EC2 instances
+              for that, and this task is executed in a private
+               subnet, talking to the outside world via the NAT
+                gateway in the public subnet. The ALB in the public
+                 subnet funnels HTTP requests to the task, and the 
+                 response is coming via the NAT gateway. Pretty simple.
+        </p>
+
+        <p>
+            Now clicking this setup together in the AWS console is not 
+            the most complicated task in the world, but for the sake of 
+            trying out Terraform, this was the chosen infrastructure to 
+            turn into code - or to be more specific: HCL.
+        </p>
         
+        <h2>Step 0 - The AWS provider</h2>
+        <p>Before we can start talking to an AWS account, 
+            we have to setup the Terraform provider, 
+            which looks something like this:</p>
+
+        <pre>
+            <code>
+    provider "aws" {
+
+        access_key = var.aws-access-key
+
+        secret_key = var.aws-secret-key
+
+        region     = "eu-central-1"
+
+        version    = "~> 2.0"
+    }
+            </code>
+        </pre>
+        <p>You can actually also leave out access_key and secret_key, 
+            then Terraform will use the values stored in your <code style="color: yellow;">`.aws/config.`</code></p>
     </main>
     <footer>
         <p>© All rights reserved — cs.fyi</p>
