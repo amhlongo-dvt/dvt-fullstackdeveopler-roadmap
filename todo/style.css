@@ -12,12 +12,14 @@
 
 body {
     /* margin: unset; */
+    margin: auto;
     background-color: #eee;
     font-family: Helvetica , Arial , sans-serif;
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: start;    
+    justify-content: start;  
+    max-width: 600px;  
 }
 
 header {
@@ -99,6 +101,7 @@ textarea{
     color: white;
     border: transparent;
     cursor: pointer;
+    margin-inline-end: 0.5em;
 }
 
 .done-btn{

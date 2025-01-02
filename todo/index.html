@@ -11,36 +11,21 @@
         <h2 class="header-title">Todo</h2>
     </header>
     <main>
-        <form>
+        <form id="taskInfo">
         
                 <label for="title" class="title-label">Title</label>
-                <input id="title" class="title-input" type="text">
+                <input id="title" class="title-input" name="title" type="text">
             
         
                 <label for="description" class="description-label">Description</label>
-                <textarea id="description" class="description-input" type="text" ></textarea>
+                <input id="description" name="description" class="description-input" type="text" />
             
       
                 <input class="add-btn" type="submit" value="Add">
             
         </form>
         <div class="task-container" id="container">
-            <div class="task">
-                <h3 class="task-title">Cooking</h3>
-                <p class="task-description">Make a portabelini mushroom</p>
-                <div class="btn-container">
-                    <button class="edit-btn">Edit</button>
-                    <button class="done-btn">Done</button>
-                </div>
-            </div>
-            <div class="task">
-                <h3 class="task-title">Cooking</h3>
-                <p class="task-description">Make a portabelini mushroom </p>
-                <div class="btn-container">
-                    <button class="edit-btn">Edit</button>
-                    <button class="done-btn">Done</button>
-                </div>
-            </div>
+            
         </div>
     </main>
     <footer></footer>
