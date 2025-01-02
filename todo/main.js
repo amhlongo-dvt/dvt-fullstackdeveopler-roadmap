@@ -3,6 +3,9 @@ const taskContainer = document.querySelector('#container')
 
 
 async function addTask() {
+    
+
+    const id = taskContainer.children.length
     const formData =  new FormData(form);
  
     const task = document.createElement("div")
@@ -13,6 +16,7 @@ async function addTask() {
     const doneButton = document.createElement("button")
     
     task.setAttribute('class', 'task')
+    task.setAttribute('id', id)
     taskTitle.setAttribute('class', 'task-title')
     taskDescription.setAttribute('class', 'task-description')
     buttonContainer.setAttribute('class', 'btn-container')
@@ -34,6 +38,10 @@ async function addTask() {
        task.remove() 
     })
 
+    editButton.addEventListener('click',()=>{
+        editTask(id)
+    })
+
     taskContainer.appendChild(task)
 
 }
@@ -42,5 +50,14 @@ form.addEventListener("submit", (event) => {
     event.preventDefault();
     addTask()
 })
+
+function editTask(index){
+    const task = document.getElementById(index)
+    form.children.item(1).value = task.children.item(0).textContent
+    form.children.item(3).value = task.children.item(1).textContent
+    form.children.item(4).value = "Edit"
+    console.log(task);
+    
+}
 
 
