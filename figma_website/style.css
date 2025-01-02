@@ -126,3 +126,54 @@ pre{
     background-color: rgb(41, 40, 40);
     border-radius: 6px;
 }
+
+.tag-list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.tag-header {
+    color: rgb(115, 115, 115);
+    letter-spacing: .025em;
+    text-transform: uppercase;
+    font-size: .70rem;
+    line-height: 1rem;
+    font-weight: inherit;
+    margin-top: 1.75em;
+    margin-bottom: 1rem;
+
+}
+.tag-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tag-container > a{
+    width: auto;
+    color: rgb(163, 163, 163);
+    font-size: .875rem;
+    line-height: .375rem;
+    padding: .375rem .75rem;
+    background-color: rgb(38, 38, 38);
+    border-color: transparent;
+    border-width: 1px;
+    border-radius: .5rem;
+    margin-bottom: .5rem;
+    margin-top: .5rem;
+    margin-right: .5rem;
+    text-decoration: inherit;
+}
+
+.tag-container > a > span {
+    margin-left: .375rem;
+    color: rgb(115, 115, 115);
+    font-size: .875rem;
+    line-height: 1.25rem;
+}
+
+footer > div {
+
+    margin-bottom: 10em;
+}
