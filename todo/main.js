@@ -59,6 +59,9 @@ async function addTask() {
         taskContainer.appendChild(task)
     }
 
+    form.children.item(1).value = ""
+    form.children.item(3).value = ""
+
 }
 
 form.addEventListener("submit", (event) => {
