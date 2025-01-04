@@ -1,0 +1,60 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --gap-size: 1.5rem
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: aqua;
+    /* height: 100vh; */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+img {
+     max-width: 2em;
+     max-height: 2em;
+     margin-inline-start: 1em;
+     border-radius: 9px;
+     align-self: center;
+     border: 1px solid;
+}
+
+.profile {
+    display: flex;
+    background-color: white;
+    border-radius: 8px;
+    border: 1px solid;
+    padding: .375em;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.profile-info{
+    width: 100%;
+    padding-inline-start: 1em;
+    font-weight: 600;
+    font-size: .875em;
+}
+
+.profile-location {
+    margin-block-start: 1em;
+    font-weight: 200;
+    font-size: .7em;
+    justify-self: end;
+}
+
+.profile-bio {
+    font-weight: 400;
+    font-size: .7em;
+}
+
+h3, p {
+    margin: 0;
+}
