@@ -1,7 +1,7 @@
 const form  = document.getElementById("search-form")
 const repo  = document.getElementById("repo")
-const following  = document.getElementById("followers")
-const follower  = document.getElementById("following")
+const following  = document.getElementById("following")
+const follower  = document.getElementById("followers")
 const name = document.querySelector(".profile-name")
 const bio = document.querySelector(".profile-bio")
 const userLocation = document.querySelector(".profile-location")
@@ -24,7 +24,11 @@ async function getUserDetails() {
       bio.textContent = json.bio
       userLocation.textContent = json.location
       image.src = json.avatar_url
-      
+
+      repo.children.item(0).textContent = json.public_repos
+      following.children.item(0).textContent = json.following
+      follower.children.item(0).textContent = json.followers
+
     } catch (error) {
       console.error(error.message);
     }
