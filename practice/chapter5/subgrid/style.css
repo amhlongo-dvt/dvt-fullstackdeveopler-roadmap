@@ -1,0 +1,39 @@
+body {
+    background-color: #709b90;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.author-bios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+    max-inline-size: 800px;
+    margin-inline: auto;
+}
+
+.card {
+    display: grid;
+    gap: 0;
+    grid-row: span 3;
+    grid-template-rows: max-content auto max-content;
+    grid-template-rows: subgrid;
+    padding: 1em;
+    border-radius: 0.5rem;
+    background-color: #fff;
+}
+
+.card > h3 {
+    align-self: end;
+    margin-block: 0;
+    padding-block-end: 0.5rem;
+    border-block-end : 1px solid #eee;
+}
+
+.read-more {
+    margin-block-start: 1em;
+    text-align: right;
+}
+.read-more > a {
+    text-transform: uppercase;
+    text-decoration: none;
+}

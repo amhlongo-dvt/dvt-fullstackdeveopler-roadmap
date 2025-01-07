@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="top-banner">
+        <div class="top-banner-inner">
+            <p>
+                Find out what's going on at Wombat Coffee each 
+                month. Sign up for our newsletter: 
+                <button id="open" type="button">Sign Up</button>
+            </p>
+        </div>
+    </header>
+    <div class="modal" id="modal" role="dialog" aria-modal="true">
+        <div class="modal-backdrop" id="backdrop"></div>
+        <div class="modal-body">
+            <button class="modal-close" id="close" type="button">Close</button>
+            <h2>Wombat Newsletter</h2>
+            <p>Sign up for our monthly newsletter. No spam. We promise!</p>
+            <form>
+                <p>
+                    <label for="email">Email address</label>
+                    <input type="text" name="email">
+                </p>
+            </form>
+        </div>
+    </div>
+    <main class="container">
+        <div class="col-main">
+            <nav>
+                <div class="dropdown" id="dropdown">
+                    <button type="button" class="dropdown-toggle"
+                    id="dropdown-toggle">Main Menu</button>
+                    <div class="dropdown-menu">
+                        <ul class="submenu">
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/coffees">Coffee</a></li>
+                            <li><a href="/brewers">Brewers</a></li>
+                            <li><a href="/specials">Specials</a></li>
+                            <li><a href="/about">About us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <h1>Wombat Coffee Roasters</h1>
+        </div>
+        <aside class="col-sidebar">
+            <div class="affix">
+                <ul class="submenu">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/coffees">Coffee</a></li>
+                    <li><a href="/brewers">Brewers</a></li>
+                    <li><a href="/specials">Specials</a></li>
+                    <li><a href="/about">About us</a></li>
+                </ul>
+            </div>
+        </aside>
+
+    </main>
+
+    <script type="text/javascript">
+        const button = document.getElementById('open')
+        const close = document.getElementById('close')
+        const model = document.getElementById('modal')
+        const backdrop = document.getElementById('backdrop')
+        const dropdownToggle = document.getElementById('dropdown-toggle')
+        const dropdown = document.getElementById('dropdown')
+        
+        dropdownToggle.addEventListener('click', function (event) {
+            dropdown.classList.toggle('is-open')
+        })
+        button.addEventListener('click', function (event) {
+            modal.classList.add('is-open')
+            document.body.classList.add("no-scroll")
+        })
+        close.addEventListener('click', function (event) {
+            modal.classList.remove('is-open')
+            document.body.classList.remove("no-scroll")
+        })
+        backdrop.addEventListener('click', function (event) {
+            modal.classList.remove('is-open')
+            document.body.classList.remove("no-scroll")
+        })
+    </script>
+    
+</body>
+</html>

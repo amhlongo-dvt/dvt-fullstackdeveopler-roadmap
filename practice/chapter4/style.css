@@ -1,0 +1,122 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --gap-size: 1.5em
+}
+
+body {
+    margin: 0.5em;
+    background-color: #709b90;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.stack > * + * {
+    margin-block-start: 1.5em;
+}
+
+.container {
+    max-inline-size: 1080px;
+    margin-inline: auto;            
+}
+
+.site-nav {
+    display: flex;
+    gap: var(--gap-size);
+    padding: 0.5rem;
+    list-style-type: none;
+    background-color: #5f4b44;
+}
+
+.site-nav > li > a {
+    display: block;
+    padding: 0.5em 1em;
+    background-color: #cc6b5a;
+    color: white;
+    text-decoration: none;
+}
+
+.site-nav > .nav-right {
+    margin-inline-start: auto;
+}
+
+.title {
+    padding: 1.5em;
+    background-color: #fff;
+}
+
+.flex {
+    display: flex;
+    margin-left: auto;
+    gap: var(--gap-size);
+}
+
+.column-main {
+    flex: 2;
+}
+.column-sidebar {
+    flex: 1;    
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-size);
+}
+
+.column-sidebar > .title {
+    flex: 1;
+}
+
+.login-form h3 {
+    margin: 0;
+    font-size: 0.9em;
+    font-weight: bold;
+    text-align: end;
+    text-transform: uppercase;
+}
+
+
+.login-form input:not([type=checkbox] :not([type=radio])) {
+    display: block;
+    inline-size: 100%;
+}
+
+.login-form button {
+    margin-block-start: 1em;
+    border: 1px solid #cc6b5a;
+    background-color: white;
+    cursor: pointer;
+}
+
+.centered {
+    text-align: center;
+}
+
+.cost {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 0.7;
+}
+
+.cost-currency {
+    font-size: 2em;
+}
+
+.cost-dollars {
+    font-size: 4em;
+}
+
+.cost-cents {
+    font-size: 1.5em;
+    align-self: flex-start;
+}
+
+.cta-button {
+    display: block;
+    background-color: #cc6b5a;
+    color: white;
+    padding: 0.5em 1em;
+    text-decoration: none;
+}
