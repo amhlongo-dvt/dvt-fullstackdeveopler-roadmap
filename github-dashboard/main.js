@@ -1,3 +1,4 @@
+const info  = document.getElementById("user-info")
 const form  = document.getElementById("search-form")
 const repo  = document.getElementById("repo")
 const following  = document.getElementById("following")
@@ -16,19 +17,20 @@ async function getUserDetails() {
       if (!response.ok) {
         throw new Error(`Response status: ${response.status}`);
       }
-  
+      
       const json = await response.json();
       console.log(json);
-
+      
       name.textContent = json.name
       bio.textContent = json.bio
       userLocation.textContent = json.location
       image.src = json.avatar_url
-
+      
       repo.children.item(0).textContent = json.public_repos
       following.children.item(0).textContent = json.following
       follower.children.item(0).textContent = json.followers
-
+      info.classList.remove('disabled')
+      
     } catch (error) {
       console.error(error.message);
     }

@@ -118,3 +118,7 @@ img {
 .stat-block > h3 {
     font-size: .8em;
 }
+
+.disabled {
+    display: none;
+}
