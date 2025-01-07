@@ -45,6 +45,10 @@ input:is([type="submit"]) {
     border: 1px solid;
 }
 
+input:is([type="submit"]):hover {
+    background-color: aquamarine;
+}
+
 .profile {
     display: flex;
     background-color: white;
@@ -113,4 +117,8 @@ img {
 
 .stat-block > h3 {
     font-size: .8em;
+}
+
+.disabled {
+    display: none;
 }
