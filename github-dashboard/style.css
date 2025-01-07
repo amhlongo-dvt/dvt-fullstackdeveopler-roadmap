@@ -45,6 +45,10 @@ input:is([type="submit"]) {
     border: 1px solid;
 }
 
+input:is([type="submit"]):hover {
+    background-color: aquamarine;
+}
+
 .profile {
     display: flex;
     background-color: white;
