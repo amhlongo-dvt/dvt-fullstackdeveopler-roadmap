@@ -11,12 +11,16 @@
 
 body {
     font-family: Helvetica, Arial, sans-serif;
-    background-color: aqua;
+    background-color: rgb(144, 144, 144);
     /* height: 100vh; */
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     flex-direction: column;
     justify-content: center;
+    margin-inline: 2em;
+}
+header {
+    text-align: center;
 }
 
 h3, p {
@@ -26,23 +30,30 @@ h3, p {
 form {
     margin-block: .5em;
     background-color: aliceblue;
-    padding: .5em;
+    padding: .8em;
     border: 1px solid;
     border-radius: 9px;
+    display: flex;
+    justify-content: center;
 }
 
 label {
     font-weight: 500;
+    font-size: .9em;
+    margin-inline-end: .4em;
+    padding-top: .2em;
 }
 
 input:is([type="text"]) {
-    border-radius: 99px;
+    border-radius: 9px;
     border: 1px solid;
 }
 
 input:is([type="submit"]) {
     border-radius: 99px;
     border: 1px solid;
+    margin-inline-start: 1em;
+    padding: .2em;
 }
 
 input:is([type="submit"]):hover {
@@ -63,7 +74,7 @@ img {
      max-width: 2em;
      max-height: 2em;
      margin-inline-start: 1em;
-     border-radius: 9px;
+     border-radius: 99px;
      align-self: center;
      border: 1px solid;
 }
@@ -84,14 +95,16 @@ img {
 
 .profile-bio {
     font-weight: 400;
-    font-size: .7em;
+    font-size: 1em
 }
 
 .stat-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin-block-start: .5em;
+    /* justify-content: space-between; */
+    justify-content: center;
+    /* margin-block-start: .5em; */
+    gap: .5em;
 }
 
 .stat-block {
@@ -103,6 +116,7 @@ img {
     justify-content: center;
     min-width: 6em;
     min-height: 6em;
+    
     border: 1px solid;
     border-radius: 9px;
 }
@@ -121,4 +135,23 @@ img {
 
 .disabled {
     display: none;
+}
+
+.repo {
+    margin-block-start: .5em;
+    padding: .5em;
+    background-color: aquamarine;
+    border: 1px solid;
+    border-radius: 9px;
+}
+
+.heading {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.subtitle {
+    font-size: .875em;
+    margin-block-start: .5em;
 }
