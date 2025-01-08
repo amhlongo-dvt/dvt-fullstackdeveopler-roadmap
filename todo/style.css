@@ -19,7 +19,13 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: start;  
-    max-width: 600px;  
+}
+
+@media (min-width: 600px) {
+    body{
+        max-width: 600px;
+    }  
+    
 }
 
 header {
@@ -34,6 +40,10 @@ form {
     flex-direction: column;
 }
 
+input {
+    border-radius: 9px;
+}
+
 label {
     margin-top: 1em;
 }
@@ -43,6 +53,13 @@ textarea{
     margin: 0;
     border-radius: 5%;
     background-color: antiquewhite;
+}
+
+.taskInfo {
+    background-color: #158fd1;
+    margin: 0;
+    padding-inline: 2em;
+    color: #eee;
 }
 
 
@@ -58,6 +75,8 @@ textarea{
     justify-content: center;
     text-align: center;
     align-self: center;
+    border-radius: 99px;
+    margin-block-end: 1em;
 }
 
 
