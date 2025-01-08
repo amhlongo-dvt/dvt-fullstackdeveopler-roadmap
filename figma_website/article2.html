@@ -16,40 +16,53 @@
             </svg>
         </a>
         <ul class="nav-list">
-                <li><a href="/">Home</a></li>
-                <li><a href="explore.html">Explore</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="explore.html">Explore</a></li>
         </ul>
     </nav>
     <header>
-        <h1 class="header-title">cs.fyi</h1>
-        <p class="header-subtitle">Frontend, Backend, DevOps and everything in between.</p>
+        <span class="tag">Distributed Systems</span>
+        <h1 class="article-title">IaaS vs PaaS vs SaaS</h1>
+        <p class="article-subtitle">October 24, 2023</p>
     </header>
-    <main class="main">
-        <a class="article-link" href="article1.html">
-            <span class="article-title">Deploy to ECS with Fargate using Terraform</span>
-            <span class="article-date">Nov 3, 2023</span>
-        </a>
-        <a class="article-link" href="article2.html">
-            <span class="article-title">IaaS vs PaaS vs SaaS</span>
-            <span class="article-date">Oct 24, 2023</span>
-        </a>
-        <a class="article-link" href="article3.html">
-            <span class="article-title">Scalability for Dummies</span>
-            <span class="article-date">Sep 24, 2023</span>
-        </a>
-        <a class="article-link" href="/">
-            <span class="article-title">Load IP addresses for EC2 in Ansible Inventory</span>
-            <span class="article-date">Sep 6, 2023</span>
-        </a>
-        <a class="article-link" href="/">
-            <span class="article-title">Generate Terraform from existing AWS infrastructure</span>
-            <span class="article-date">Sep 6, 2023</span>
-        </a>
-        <a class="article-link" href="/">
-            <span class="article-title">Setup and Install PostgreSQL Using Docker
-            </span>
-            <span class="article-date">Apr 18, 2023</span>
-        </a>
+    <main class="main-article">
+        <p>
+            I often see confusion about the words IaaS, PaaS and SaaS, mostly if I speak to my friends about cloud and what I am doing. 
+            So here is my very simple intro to the meaning of these acronyms.
+        </p>
+        <p>In general, words ending with …aaS are 
+            (mostly) the names of service layers, often relating to the cloud.
+        </p>
+        <br/>
+        <h2> IaaS</h2>
+        <p>
+            Means Infrastructure as a Service. 
+            Companies doing IaaS offer you the service to use their virtualized server hardware for your own needs.
+            The difference to standard hosting providers is, the “as a service” component. 
+            It means, you do not go into any long-term commitments and you just pay for what you actually use per hour. 
+            Examples are typical cloud providers like Amazon Web Services or Rackspace.
+        </p>
+        <br>
+        <h2>PaaS</h2>
+        <p>Means Platform as a Service. 
+            This is the layer that sits on top of IaaS. 
+            It often hides the complexity of running and maintaining servers in the cloud and makes bringing a standard web app into the cloud very simple and convenient. 
+            PaaS providers care for all the scaling, uptime, server updates and server settings. 
+            They add a premium of x per cent onto the actual IaaS cost produced by a web app and charge per monthly flat or hour. 
+            These days, there are many different platform-as-a-service providers existing, the most best-known are Heroku and PHPFog (now AppFog).
+        </p>
+        <br>
+        <h2>SaaS</h2>
+        <p>That’s the web app itself. SaaS often replace existing desktop-only solutions and run, due to scalability needs, very often in the cloud. 
+            Sometimes directly on the IaaS layer and sometimes with the help of the PaaS layer. 
+            They are ad-financed or charge monthly and there are many software-as-a-service businesses existing. 
+            Just to name the first ones that come to my mind: Dropbox, Evernote, Google Docs, etc.
+        </p>
+        <p>
+            There are more layers existing.
+            One is called BPaaS or Business Platform as a Service, but I won’t focus on that, since it is to esoteric for most people.
+            
+        </p>
     </main>
     <footer>
         <p>© All rights reserved — cs.fyi</p>
