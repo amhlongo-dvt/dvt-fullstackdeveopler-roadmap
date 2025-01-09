@@ -10,7 +10,7 @@ function appendValue(value) {
     }
     
     values.push(value);
-
+    
     console.log(values.join(""));
     
 }
