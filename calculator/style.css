@@ -64,6 +64,12 @@ header{
     border: none;
 }
 
+.button > button:hover {
+    border: 2px solid;
+    cursor: pointer;
+}
+
+
 .answer {
     font-size: 2em;
     font-weight: 450;
