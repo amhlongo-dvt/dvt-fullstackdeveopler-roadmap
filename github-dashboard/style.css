@@ -25,6 +25,14 @@ body {
     justify-content: center;
     margin-inline: 2em;
 }
+
+@media (min-width: 680px){
+    body {
+        max-width: 680px;
+        margin: auto;
+    }
+}
+
 header {
     text-align: center;
     color: var(--red);

@@ -1,7 +1,7 @@
 
 const calc = document.querySelector(".calculation")
 const answer = document.querySelector(".answer")
-const operations = ['+', '-', '*', '/', "."]
+const operations = ['+', '-', '*', '/']
 const operators = {
     '+': (a, b) => a + b,
     '-': (a, b) => a - b,
