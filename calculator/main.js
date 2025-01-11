@@ -34,6 +34,12 @@ function appendValue(value) {
             window.alert("Cannot start with an operator")
             return
         }
+
+        if(operations.includes(values.at(-1))){
+            values[values.length-1] = value
+            calc.textContent = values.join("");
+            return;
+        }
     }
     if(!operations.includes(value)){
         numbers.push(value)
