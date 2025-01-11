@@ -10,7 +10,7 @@ const operators = {
 };
 let values = []
 let numbers = []
-let reset = false
+let reset = true
 function appendValue(value) {
     if (reset){
         answer.textContent = "0"
@@ -31,6 +31,17 @@ function appendValue(value) {
     calc.textContent = values.join("")    
     console.log(values);
     numbers = []
+}
+
+function negate(){
+    if(reset){
+        window.alert("please enter a number first")
+        return
+    }
+    let temp = numbers.join("");
+    numbers = []
+    numbers.push(parseInt(temp)*-1)
+    calc.textContent = values.join("") + numbers.join("") 
 }
 
 function clearValues() {
