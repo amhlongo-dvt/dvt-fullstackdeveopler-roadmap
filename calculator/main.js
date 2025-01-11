@@ -103,7 +103,7 @@ function percentage(){
     }
     let temp = numbers.join("");
     numbers = []
-    numbers.push(parseInt(temp)/100)
+    numbers.push(parseFloat(temp)/100)
     calc.textContent = values.join("") + numbers.join("") 
 }
 
@@ -112,6 +112,7 @@ function clearValues() {
     numbers = []
     calc.innerHTML = "<br>"
     answer.textContent = "0"
+    reset = true
     console.log("cleared");
 }
 
