@@ -28,31 +28,33 @@ function appendValue(value) {
         }
     }
 
-    currentValue = value
+    // If an operation is entered
     if (operations.includes(value)) {
         if (values.length === 0 && numbers.length === 0){
             window.alert("Cannot start with an operator")
             return
         }
 
-        if(operations.includes(values.at(-1))){
-            values[values.length-1] = value
-            calc.textContent = values.join("");
-            return;
+        // if(operations.includes(values.at(-1))){
+        //     values[values.length-1] = value
+        //     calc.textContent = values.join("");
+        //     return;
+        // }
+
+        if(numbers.length>0){
+            values.push(numbers.join(""));
+            numbers = []
         }
-    }
-    if(!operations.includes(value)){
-        numbers.push(value)
-        calc.textContent = values.join("") + numbers.join("")   
+        values.push(value);
+        calc.textContent = values.join("") 
         return
     }
-    if(numbers.length>0){
-        values.push(numbers.join(""));
-    }
-    values.push(value);
-    calc.textContent = values.join("")    
-    console.log(values);
-    numbers = []
+    
+    
+    numbers.push(value)
+    calc.textContent = values.join("") + numbers.join("")   
+   
+ 
 }
 
 function negate(){
