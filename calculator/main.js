@@ -1,39 +1,45 @@
 
 const calc = document.querySelector(".calculation")
 const answer = document.querySelector(".answer")
-const values = []
 const operations = ['+', '-', '*', '/', "."]
-let numbers = []
 const operators = {
     '+': (a, b) => a + b,
     '-': (a, b) => a - b,
     '*': (a, b) => a * b,
     '/': (a, b) => a / b
-  };
-
+};
+let values = []
+let numbers = []
+let reset = false
 function appendValue(value) {
+    if (reset){
+        answer.textContent = "0"
+        reset = false
+    }
     currentValue = value
-    // if (operations.includes(value) && operations.includes(values.at(-1))) {
-    //     window.alert("Please press a number")
-    //     return
-    // }
-    if(operations.includes(value)){
-        // numbers.join("")
-        console.log(numbers.join(""))
-
-        // values.push(numbers)
-    }else{
-        numbers.push(value)
-        calc.textContent = numbers.join("")   
+    if (operations.includes(value) && operations.includes(values.at(-1))) {
+        window.alert("Please press a number")
         return
-        // calc.textContent = values.join("") + numbers.join("")
-        // return    
+    }
+    if(!operations.includes(value)){
+        numbers.push(value)
+        calc.textContent = values.join("") + numbers.join("")   
+        return
     }
     values.push(numbers.join(""));
     values.push(value);
     calc.textContent = values.join("")    
     console.log(values);
     numbers = []
+}
+
+function clearValues() {
+    values = []
+    numbers = []
+    calc.innerHTML = "<br>"
+    answer.textContent = "0"
+    console.log("cleared");
+    
 }
 
 function calculate() {
@@ -50,4 +56,8 @@ function calculate() {
     })
     answer.textContent = result
     calc.textContent = values.join("") 
+    // clearValues()
+    values = []
+    numbers = []
+    reset = true
 }
