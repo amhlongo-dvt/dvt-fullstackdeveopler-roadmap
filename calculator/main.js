@@ -121,7 +121,7 @@ function calculate() {
         window.alert("Please enter a calculation");
         return;
     }
-    let result 
+    let result = 0
     
     values.push(numbers.join(""))
     values.forEach((element,i) => {
