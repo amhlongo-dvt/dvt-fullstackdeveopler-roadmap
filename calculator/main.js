@@ -29,9 +29,11 @@ function appendValue(value) {
     }
 
     currentValue = value
-    if (operations.includes(value) && operations.includes(values.at(-1))) {
-        window.alert("Please press a number")
-        return
+    if (operations.includes(value)) {
+        if (values.length === 0 && numbers.length === 0){
+            window.alert("Cannot start with an operator")
+            return
+        }
     }
     if(!operations.includes(value)){
         numbers.push(value)
