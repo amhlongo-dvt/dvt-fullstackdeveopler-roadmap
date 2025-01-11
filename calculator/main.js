@@ -11,6 +11,7 @@ const operators = {
 let values = []
 let numbers = []
 let reset = true
+
 function appendValue(value) {
     if (reset){
         answer.textContent = "0"
@@ -26,7 +27,9 @@ function appendValue(value) {
         calc.textContent = values.join("") + numbers.join("")   
         return
     }
-    values.push(numbers.join(""));
+    if(numbers.length>0){
+        values.push(numbers.join(""));
+    }
     values.push(value);
     calc.textContent = values.join("")    
     console.log(values);
@@ -42,6 +45,26 @@ function negate(){
     numbers = []
     numbers.push(parseInt(temp)*-1)
     calc.textContent = values.join("") + numbers.join("") 
+}
+
+function deleteValue(){
+    if(reset){
+        window.alert("please enter a number first")
+        return
+    }
+    if(operations.includes(values.at(-1))){
+        values.pop()
+        calc.textContent = values.join("")
+        return
+    }
+
+    numbers.pop()
+
+    if(values.length==0){
+        calc.innerHTML = "<br>"
+    }else{
+        calc.textContent = values.join("") + numbers.join("") 
+    }
 }
 
 function percentage(){
@@ -61,7 +84,6 @@ function clearValues() {
     calc.innerHTML = "<br>"
     answer.textContent = "0"
     console.log("cleared");
-    
 }
 
 function calculate() {
