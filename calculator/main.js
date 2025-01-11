@@ -35,11 +35,11 @@ function appendValue(value) {
             return
         }
 
-        // if(operations.includes(values.at(-1))){
-        //     values[values.length-1] = value
-        //     calc.textContent = values.join("");
-        //     return;
-        // }
+        if(operations.includes(values.at(-1))){
+            values[values.length-1] = value
+            calc.textContent = values.join("")+numbers.join("") ;
+            return;
+        }
 
         if(numbers.length>0){
             values.push(numbers.join(""));
