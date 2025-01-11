@@ -44,6 +44,17 @@ function negate(){
     calc.textContent = values.join("") + numbers.join("") 
 }
 
+function percentage(){
+    if(reset){
+        window.alert("please enter a number first")
+        return
+    }
+    let temp = numbers.join("");
+    numbers = []
+    numbers.push(parseInt(temp)/100)
+    calc.textContent = values.join("") + numbers.join("") 
+}
+
 function clearValues() {
     values = []
     numbers = []
@@ -60,8 +71,8 @@ function calculate() {
         console.log(element)
         if(operations.includes(element)){
             const operator = element;
-            const operand1 = parseInt(values.at(i-1));
-            const operand2 = parseInt(values.at(i+1));
+            const operand1 = parseFloat(values.at(i-1));
+            const operand2 = parseFloat(values.at(i+1));
             result += operators[operator](operand1, operand2);
         }
     })
