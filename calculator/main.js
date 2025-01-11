@@ -17,6 +17,17 @@ function appendValue(value) {
         answer.textContent = "0"
         reset = false
     }
+
+    if (value == '.'){
+        if (numbers.includes('.')) {
+            window.alert("Cannot add multiple decimal points");
+            return;
+        }
+        if (numbers.length === 0) {
+            numbers.push('0');
+        }
+    }
+
     currentValue = value
     if (operations.includes(value) && operations.includes(values.at(-1))) {
         window.alert("Please press a number")
