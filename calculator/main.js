@@ -64,7 +64,7 @@ function negate(){
     }
     let temp = numbers.join("");
     numbers = []
-    numbers.push(parseInt(temp)*-1)
+    numbers.push(parseFloat(temp)*-1)
     calc.textContent = values.join("") + numbers.join("") 
 }
 
@@ -75,17 +75,25 @@ function deleteValue(){
     }
     if(operations.includes(values.at(-1))){
         values.pop()
-        calc.textContent = values.join("")
+        if (values.length === 0) {
+            calc.innerHTML = "<br>";
+        }else{
+            calc.textContent = values.join("")
+        }
         return
-    }
-
-    numbers.pop()
-
-    if(values.length==0){
-        calc.innerHTML = "<br>"
-    }else{
+    }else {
+        numbers.pop()
+        console.log(numbers);
+        console.log(values);
+        if (numbers.length === 0 && values.length === 0) {
+            calc.innerHTML = "<br>";
+            return;
+        }
         calc.textContent = values.join("") + numbers.join("") 
     }
+
+    
+
 }
 
 function percentage(){
