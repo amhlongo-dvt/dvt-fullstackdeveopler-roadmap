@@ -117,7 +117,12 @@ function clearValues() {
 }
 
 function calculate() {
-    let result = 0
+    if (values.length === 0) {
+        window.alert("Please enter a calculation");
+        return;
+    }
+    let result 
+    
     values.push(numbers.join(""))
     values.forEach((element,i) => {
         console.log(element)
