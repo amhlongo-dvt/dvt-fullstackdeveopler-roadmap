@@ -34,7 +34,7 @@ header{
     /* background-color:aqua; */
     padding-block-start: 2em;
     text-align: end;
-    padding-inline-end: .8em;
+    padding-inline: .8em;
     margin-block-end: .8em;
 }
 
@@ -74,6 +74,7 @@ header{
     font-size: 2em;
     font-weight: 450;
     margin-block-end: .3em;
+    overflow: hidden;
 }
 
 .light > button {
