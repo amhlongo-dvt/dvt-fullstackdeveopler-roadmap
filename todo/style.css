@@ -11,13 +11,14 @@
 }
 
 body {
-    /* margin: unset; */
-    margin: auto;
-    background-color: #eee;
+    background-color: burlywood;
     font-family: Helvetica , Arial , sans-serif;
-    height: 100vh;
-    display: flex;
     flex-direction: column;
-    justify-content: start;  
+    justify-items: center;  
+    margin: auto;
+}
+
+.header-title{
+    text-align: center;
 }
 
