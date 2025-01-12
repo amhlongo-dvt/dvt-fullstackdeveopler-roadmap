@@ -8,24 +8,30 @@
 </head>
 <body>
     <header>
-        <h2 class="header-title">Todo</h2>
+        <h2 class="header-title">Todo List</h2>
     </header>
     <main>
         <form id="taskInfo" class="taskInfo">
-        
-                <label for="title" class="title-label">Title</label>
-                <input id="title" class="title-input" name="title" type="text">
-            
-        
-                <label for="description" class="description-label">Description</label>
-                <input id="description" name="description" class="description-input" type="text" />
-            
-      
+                <input type="text" class="search" name="search" placeholder="Search">
+                <input id="title" class="title-input" name="title" type="text" placeholder="Title">
+                <input id="description" name="description" class="description-input" type="text" placeholder="Description" />
                 <input class="add-btn" type="submit" value="Add">
-            
         </form>
         <div class="task-container" id="container">
-            
+            <div class="task">
+                <input class="task-done" type="checkbox">
+                <h3 class="task-title">Make Bed</h3>
+                <p class="task-desc">Make Bed and place all coushion in the right place</p>
+                <button class="edit-button">Edit</button>
+                <button class="delete-button">Delete</button>
+            </div>
+            <div class="task">
+                <input class="task-done" type="checkbox">
+                <h3 class="task-title">Exercise</h3>
+                <p class="task-desc">Lift rocks and lurk under them</p>
+                <button class="edit-button">Edit</button>
+                <button class="delete-button">Delete</button>
+            </div>
         </div>
     </main>
     <footer></footer>
