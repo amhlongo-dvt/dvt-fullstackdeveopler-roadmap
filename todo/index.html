@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-DO</title>
-     <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <header>
@@ -12,26 +13,52 @@
     </header>
     <main>
         <form id="taskInfo" class="taskInfo">
+            <div class="input-container">
+                <i class="fas fa-search"></i>
                 <input type="text" class="search" name="search" placeholder="Search">
+            </div>
+            <div class="input-container">
+                <i class="fas fa-heading"></i>
                 <input id="title" class="title-input" name="title" type="text" placeholder="Title">
-                <input id="description" name="description" class="description-input" type="text" placeholder="Description" />
-                <input class="add-btn" type="submit" value="Add">
+            </div>
+            <div class="input-container">
+                <i class="fas fa-align-left"></i>
+                <textarea id="description" name="description" class="description-input" type="text" placeholder="Description" ></textarea>
+            </div>
+            <input class="add-btn" type="submit" value="Add">
         </form>
         <div class="task-container" id="container">
+            
             <div class="task">
-                <input class="task-done" type="checkbox">
-                <h3 class="task-title">Make Bed</h3>
-                <p class="task-desc">Make Bed and place all coushion in the right place</p>
-                <button class="edit-button">Edit</button>
-                <button class="delete-button">Delete</button>
+                <label class="checkBox">
+                    <input id="ch1" type="checkbox">
+                    <div class="transition"></div>
+                </label>
+                <div class="task-text">
+                    <h3 class="task-title">Exercise</h3>
+                    <p class="task-desc">Lift rocks and lurk for humans</p>
+                </div>
+                <div class="task-button">
+                    <button class="edit-button"><i class="fa-solid fa-pen-to-square"></i></button>
+                    <button class="delete-button"><i class="fa-solid fa-trash"></i></button>
+                </div>
             </div>
             <div class="task">
-                <input class="task-done" type="checkbox">
-                <h3 class="task-title">Exercise</h3>
-                <p class="task-desc">Lift rocks and lurk under them</p>
-                <button class="edit-button">Edit</button>
-                <button class="delete-button">Delete</button>
+                <label class="checkBox">
+                    <input id="ch1" type="checkbox">
+                    <div class="transition"></div>
+                </label>
+                <div class="task-text">
+                    <h3 class="task-title">Make Bed</h3>
+                    <p class="task-desc">Make Bed and place all coushion in the right place</p>
+                </div>
+                <div class="task-button">
+                    <button class="edit-button"><i class="fa-solid fa-pen-to-square"></i></button>
+                    <button class="delete-button"><i class="fa-solid fa-trash"></i></button>
+                </div>
             </div>
+ 
+            
         </div>
     </main>
     <footer></footer>

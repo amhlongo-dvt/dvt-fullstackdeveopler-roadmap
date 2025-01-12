@@ -11,13 +11,146 @@
 }
 
 body {
-    /* margin: unset; */
-    margin: auto;
-    background-color: #eee;
+    background-color: burlywood;
     font-family: Helvetica , Arial , sans-serif;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;  
+    margin-inline: 2em;
+}
+h1, h3, p {
+    margin: 0;
+}
+.header-title{
+    text-align: center;
+    text-transform: uppercase;
+    color: antiquewhite;
 }
 
+form{
+    display: flex;
+    flex-direction: column;
+    color: gray;
+}
+
+.input-container {
+    position: relative;
+}
+
+.input-container i {
+    position: absolute;
+    left: 1.5em;
+    top: 1.8em;
+    transform: translateY(-50%);
+    color: burlywood;
+}
+
+form input, textarea {
+    width: 100%;
+    font-size: 1.2em;
+    padding-block: .875em;
+    padding-inline-start: 2.5em;
+    margin-block: 0;
+    border: none;
+}
+
+.search{
+    border-bottom: 1px solid rgb(167, 165, 165);
+    border-radius: 40px 40px 0 0;
+}
+
+.description-input {
+    border-top: 1px solid rgb(167, 165, 165);
+    border-radius: 0 0 40px 40px;
+    resize: none; 
+    font-family: inherit; 
+    overflow-y: auto;
+    scrollbar-width: none; 
+}
+
+
+
+.add-btn {
+    margin-block-start: 0.275em;
+    border-radius: 99px;
+    background-color: var(--brand-color);
+    color: blanchedalmond;
+}
+
+.task {
+    display: flex;
+    background-color: brown;
+    color: burlywood;
+    margin-block: 0.875em;
+    
+    padding-block: .5em;
+    padding-inline: 1em;
+    border-radius: 99px;
+}
+
+.task-button {
+
+    align-content: center;
+    display: flex;
+}
+
+.task-button > button{
+    height: 100%;
+    width: 50%;
+    padding-inline: .875em;
+    border: none;
+    background: none;
+    color: inherit;
+}
+
+.fa-solid {
+    font-size: 1.5em;
+}
+
+button:hover{
+    color: var(--brand-color);
+}
+
+.task-text{
+    text-align: left;
+    /* background-color: aqua; */
+    flex: 1;
+    padding-inline: 1em;
+}
+
+.checkBox {
+    display: block;
+    align-self: center;
+    cursor: pointer;
+    width: 1.3em;
+    height: 1.3em;
+    border: 3px solid rgba(255, 255, 255, 0);
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 0px 0px 2px burlywood;
+    margin-inline-start: .5em;
+  }
+  
+  .checkBox div {
+    width: 60px;
+    height: 60px;
+    background-color: burlywood;
+    top: -52px;
+    left: -52px;
+    position: absolute;
+    transform: rotateZ(45deg);
+    z-index: 100;
+  }
+  
+  .checkBox input[type=checkbox]:checked + div {
+    left: -10px;
+    top: -10px;
+  }
+  
+  .checkBox input[type=checkbox] {
+    position: absolute;
+    left: 50px;
+    visibility: hidden;
+  }
+  
+  .transition {
+    transition: 300ms ease;
+  }
