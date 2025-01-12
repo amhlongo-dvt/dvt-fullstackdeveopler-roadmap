@@ -59,7 +59,7 @@ async function getRepos() {
       }
       const element = json[index];
       const clone = temp.content.cloneNode(true)
-      CCC
+      clone.querySelector("h3").textContent = element.name
       clone.querySelector("span").textContent = element.stargazers_count
       clone.querySelector(".subtitle").textContent = element.description
       repoContainer.appendChild(clone)
