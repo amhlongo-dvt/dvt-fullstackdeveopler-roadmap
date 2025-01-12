@@ -9,7 +9,7 @@
     --font-size: 1.3rem;
     --mono: "Oxygen mono", monospace;
     --sans: Oxygen, sans-serif;
-    font-size: 12px;
+    font-size: 1px;
 }
 /* border box model: https://css-tricks.com/box-sizing/ */
 html {
