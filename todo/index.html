@@ -13,10 +13,19 @@
     </header>
     <main>
         <form id="taskInfo" class="taskInfo">
+            <div class="input-container">
+                <i class="fas fa-search"></i>
                 <input type="text" class="search" name="search" placeholder="Search">
+            </div>
+            <div class="input-container">
+                <i class="fas fa-heading"></i>
                 <input id="title" class="title-input" name="title" type="text" placeholder="Title">
+            </div>
+            <div class="input-container">
+                <i class="fas fa-align-left"></i>
                 <input id="description" name="description" class="description-input" type="text" placeholder="Description" />
-                <input class="add-btn" type="submit" value="Add">
+            </div>
+            <input class="add-btn" type="submit" value="Add">
         </form>
         <div class="task-container" id="container">
             <div class="task">
@@ -29,7 +38,7 @@
             <div class="task">
                 <input class="task-done" type="checkbox">
                 <h3 class="task-title">Exercise</h3>
-                <p class="task-desc">Lift rocks and lurk under them</p>
+                <p class="task-desc">Lift rocks and lurk under them to find humans</p>
                 <button class="edit-button">Edit</button>
                 <button class="delete-button">Delete</button>
             </div>
