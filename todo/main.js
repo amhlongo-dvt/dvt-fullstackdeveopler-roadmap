@@ -1,82 +1,82 @@
-
-
 const form = document.getElementById("taskInfo")
+const search = document.querySelector(".search")
+const titleInput = document.querySelector(".title-input")
+const descriptionInput = document.querySelector(".description-input")
+const addButton = document.querySelector(".add-btn")
 const taskContainer = document.querySelector('#container')
+const temp = document.getElementsByTagName("template")[0]
 
+let task_list = [
+    {
+        title: "Exercise",
+        description: "Lift rocks and lurk for humans"
+    },
+    {
+        title: "Make Bed",
+        description: "Make bed and place all cushions in the right place"
+    },
+]
 
 async function addTask() {
     const id = taskContainer.children.length
     const formData =  new FormData(form);
-
-    if(form.children.item(4).value== "Edit"){
-        console.log("Im editting");
-
+    
+    if(addButton.value== "Edit"){
         const id = Number(form.getAttribute("id"))
-        const task = taskContainer.children.item(id)
-        task.children.item(0).textContent = formData.get("title") 
-        task.children.item(1).textContent = formData.get("description") 
-
-        console.log(id)
-        form.children.item(4).value = "Add"
-         
-        
-    }else{
-     
-        const task = document.createElement("div")
-        const taskTitle = document.createElement("h3")
-        const taskDescription = document.createElement("p")
-        const buttonContainer = document.createElement("div")
-        const editButton = document.createElement("button")
-        const doneButton = document.createElement("button")
-        
-        task.setAttribute('class', 'task')
-        task.setAttribute('id', id)
-        taskTitle.setAttribute('class', 'task-title')
-        taskDescription.setAttribute('class', 'task-description')
-        buttonContainer.setAttribute('class', 'btn-container')
-        editButton.setAttribute('class', 'edit-btn')
-        doneButton.setAttribute('class', 'done-btn')
-    
-        taskTitle.textContent = formData.get("title")
-        taskDescription.textContent = formData.get("description")
-        editButton.textContent = "Edit"
-        doneButton.textContent = "Done"
-        
-        task.appendChild(taskTitle)
-        task.appendChild(taskDescription)
-        buttonContainer.appendChild(editButton)
-        buttonContainer.appendChild(doneButton)
-        task.appendChild(buttonContainer)
-    
-        doneButton.addEventListener('click', () => {
-           task.remove() 
-        })
-    
-        editButton.addEventListener('click',()=>{
-            editTask(id)
-        })
-    
-        taskContainer.appendChild(task)
+        const task = task_list.at(id)
+        task.title = formData.get("title") 
+        task.description = formData.get("description") 
+        addButton.value = "Add"
+    }else{     
+        let task = {
+            title: formData.get("title"),
+            description: formData.get("description")
+        }
+        task_list.push(task);
     }
 
-    form.children.item(1).value = ""
-    form.children.item(3).value = ""
+    titleInput.value = ""
+    descriptionInput.value = ""
 
 }
 
 form.addEventListener("submit", (event) => {
     event.preventDefault();
     addTask()
+    renderTasks()
+    
 })
 
 function editTask(index){
-    const task = document.getElementById(index)
-    form.children.item(1).value = task.children.item(0).textContent
-    form.children.item(3).value = task.children.item(1).textContent
-    form.children.item(4).value = "Edit"
+    let  selectedTask = task_list.at(index)
+    titleInput.value = selectedTask.title
+    descriptionInput.value = selectedTask.description
+    addButton.value = "Edit"
     form.setAttribute("id", index)
-    console.log(task);
-    
+}
+
+function renderTasks(){
+    taskContainer.innerHTML = ""
+    task_list.forEach((element,i) => {
+        console.log(element.title);
+        const clone = temp.content.cloneNode(true)
+        clone.querySelector(".task-title").textContent = element.title
+        clone.querySelector(".task-desc").textContent = element.description
+        
+        
+        const deleteButton = clone.querySelector(".delete-button")
+        deleteButton.addEventListener('click', (e) => {
+            e.target.closest('.task').remove()
+            task_list.splice(i, 1)
+        })
+        const editButton = clone.querySelector(".edit-button")
+        editButton.addEventListener('click', (e) => {
+            editTask(i)
+        })
+        
+        taskContainer.appendChild(clone)
+    })
 }
 
 
+renderTasks()
