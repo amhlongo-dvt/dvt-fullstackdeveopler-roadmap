@@ -20,6 +20,8 @@ h1, h3, p {
 }
 .header-title{
     text-align: center;
+    text-transform: uppercase;
+    color: antiquewhite;
 }
 
 form{
@@ -34,19 +36,18 @@ form{
 .input-container i {
     position: absolute;
     left: 1.5em;
-    top: 50%;
+    top: 2em;
     transform: translateY(-50%);
     color: burlywood;
 }
 
-form input {
+form input, textarea {
     width: 100%;
     font-size: 1.2em;
     padding-block: 1em;
     padding-inline-start: 2.5em;
     margin-block: 0;
     border: none;
-    /* text-align: center; */
 }
 
 .search{
@@ -57,7 +58,13 @@ form input {
 .description-input {
     border-top: 1px solid rgb(167, 165, 165);
     border-radius: 0 0 40px 40px;
+    resize: none; 
+    font-family: inherit; 
+    overflow-y: auto;
+    scrollbar-width: none; 
 }
+
+
 
 .add-btn {
     margin-block-start: 0.275em;
