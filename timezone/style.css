@@ -44,9 +44,27 @@ h1, h3, p {
     margin: 0;
 }
 
+.timezone-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
 .timezone {
     color: gray;
     font-weight: 600;
+}
+
+.timezone-btn {
+    background: none;
+    border: none;
+    font-size: 1.4em;
+    margin-inline-start: .875em;
+    cursor: pointer;
+}
+
+.timezone-btn:hover{
+    color: #A31D1D;
 }
 
 .date {
@@ -54,5 +72,57 @@ h1, h3, p {
 }
 
 .time {
-    font-size: 3em;
+    font-size: 4em;
 }
+
+.modal {
+  display: none;
+}
+
+.modal.is-open {
+  display: block;
+}
+
+.modal__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal__container {
+  background-color: white;
+  padding: 2em;
+  max-width: 500px;
+  max-height: 100vh;
+  border-radius: 4px;
+  overflow-y: auto;
+  border: 3px solid;
+}
+
+.modal__title {
+    margin-block-end: .875em;
+}
+
+.modal__btn {
+    margin-block-start: .5em;
+    font-family: inherit;
+    font-weight: 600;
+    background: none;
+}
+
+.timezone-select option {
+    font-family: inherit;
+    font-weight: 600;
+}
+.timezone-select {
+    font-family: inherit;
+    font-weight: 600;
+    border: 2px solid;
+}
+

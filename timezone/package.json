@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "dayjs": "^1.11.13",
+    "micromodal": "^0.4.10",
     "moment": "^2.30.1"
   }
 }

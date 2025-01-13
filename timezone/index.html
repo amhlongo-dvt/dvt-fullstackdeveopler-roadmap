@@ -7,6 +7,8 @@
     <script src="node_modules/dayjs/dayjs.min.js"></script>
     <script src="node_modules/dayjs/plugin/timezone.js"></script>
     <script src="node_modules/dayjs/plugin/utc.js"></script>
+    <script src="node_modules/micromodal/dist/micromodal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
 </head>
 <body>
@@ -16,13 +18,31 @@
         </h1>
     </header>
     <main>
+        
         <div class="clock-container">
-            <p class="timezone">Europe/London</p>
-            <h1 class="time">13:00:00</h1>
-            <p class="date">Monday 1 May, 2025</p>
+            <div class="timezone-container">
+                <p class="timezone">Europe/London</p>
+                <button class="timezone-btn" onclick="showModal()"><i class="fa-solid fa-earth-africa"></i></button>
+            </div>
+            <h1 class="time">00:00:00</h1>
+            <p class="date">Wednesday 1 January, 2025</p>
         </div>
     </main>
     <footer></footer>
+    <div class="micromodal-slide modal" id="modal-1" aria-hidden="true"> 
+        <div class="modal__overlay" tabindex="-1" data-micromodal-close=""> 
+            <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title"> 
+                <div class="modal__content" id="modal-1-content"> 
+                    <h3 class="modal__title">Select Timezone</h3>
+                    <select id="timezone-select" class="timezone-select">
+                    </select>
+                </div>
+                <footer class="modal__footer"> 
+                    <button class="modal__btn" data-micromodal-close="" aria-label="Close this dialog window">Close</button> 
+                </footer> 
+            </div> 
+        </div> 
+    </div>
     <script src="main.js"></script>
 </body>
 </html>
