@@ -37,7 +37,7 @@ async function addTask() {
     }else{     
         let task = {
             title: formData.get("title"),
-            description: formData.get("description")
+            description: formData.get("description"),
         }
         task_list.push(task);
     }
@@ -94,6 +94,26 @@ function renderTasks(){
 
     localStorage.setItem("taskList", JSON.stringify(task_list))
 }
+
+function searchItem(term){
+    term = term.toLowerCase();
+    console.log("searching");
+    
+    const items = document.querySelectorAll('.task')
+
+    items.forEach(item => {
+        const title = item.querySelector(".task-title").textContent.toLowerCase();
+        
+        if (title.includes(term)) {
+            item.classList.remove("hidden");
+        } else {
+            item.classList.add("hidden");
+        }
+    });
+
+}
+
+
 
 
 renderTasks()
