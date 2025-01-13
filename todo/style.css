@@ -154,14 +154,14 @@ button:hover{
     border-radius: 10px;
     position: relative;
     overflow: hidden;
-    box-shadow: 0px 0px 0px 2px burlywood;
+    box-shadow: 0px 0px 0px 2px var(--positive-color);
     margin-inline-start: .5em;
 }
 
 .checkBox div {
     width: 60px;
     height: 60px;
-    background-color: burlywood;
+    background-color: var(--positive-color);
     top: -52px;
     left: -52px;
     position: absolute;
@@ -188,3 +188,8 @@ button:hover{
     display: none;
 }
   
+.title-input,
+.description-input,
+.search {
+    color: rgb(69, 69, 69);  /* Dark gray color for better readability */
+}

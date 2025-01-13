@@ -6,16 +6,7 @@ const addButton = document.querySelector(".add-btn")
 const taskContainer = document.querySelector('#container')
 const temp = document.getElementsByTagName("template")[0]
 
-let task_list = [
-    {
-        title: "Exercise",
-        description: "Lift rocks and lurk for humans"
-    },
-    {
-        title: "Make Bed",
-        description: "Make bed and place all cushions in the right place"
-    },
-]
+
 
 
 async function addTask() {
@@ -38,6 +29,7 @@ async function addTask() {
         let task = {
             title: formData.get("title"),
             description: formData.get("description"),
+            done:false
         }
         task_list.push(task);
     }
@@ -75,8 +67,28 @@ function renderTasks(){
         const clone = temp.content.cloneNode(true)
         clone.querySelector(".task-title").textContent = element.title
         clone.querySelector(".task-desc").textContent = element.description
+        const checkbox =  clone.querySelector("input[type='checkbox']")
+        const taskText = clone.querySelector(".task-text")
+        checkbox.checked = element.done
         
-        
+        if(element.done){
+            taskText.style.textDecoration = "line-through"
+            taskText.style.opcaity = "0.6"
+        }
+
+        checkbox.addEventListener('change', (e) => {
+            task_list.at(i).done = e.target.checked
+            localStorage.setItem("taskList", JSON.stringify(task_list))
+
+            if(e.target.checked){
+                taskText.style.textDecoration = "line-through"
+                taskText.style.opcaity = "0.6"
+            }else {
+                taskText.style.textDecoration = "none"
+                taskText.style.opcaity = "1"
+            }
+        })
+
         const deleteButton = clone.querySelector(".delete-button")
         deleteButton.addEventListener('click', (e) => {
             e.target.closest('.task').remove()
