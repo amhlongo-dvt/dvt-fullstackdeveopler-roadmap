@@ -1,0 +1,39 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --gap-size: 1.5rem;
+    --cream: #FEF9E1;
+    --khakhi: #E5D0AC;
+    --red: #A31D1D;
+    --maroon: #6D2323;
+}
+
+body {
+    font-family:  'Courier New', Courier, monospace;
+    background-color: var(--cream);
+    text-align: center;
+
+}
+
+
+main {
+    border: 3px solid;
+    margin-inline: 5em;
+    width: 30%;
+    margin: auto;
+    border-radius: 9px;
+
+}
+
+.timezone {
+    color: gray;
+    font-weight: 600;
+}
+
+.date {
+    font-weight: 600;
+}
