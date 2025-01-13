@@ -26,12 +26,18 @@ header {
 main {
     border: 3px solid;
     margin-inline: 5em;
-    width: 35%;
     margin: auto;
     border-radius: 9px;
     padding-block: 1em;
     text-align: end;
     justify-items: center;
+}
+
+@media (min-width:820px){
+    body {
+        width: 35%;
+        margin: auto;
+    }
 }
 
 h1, h3, p {
