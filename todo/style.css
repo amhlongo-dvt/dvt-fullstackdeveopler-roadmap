@@ -5,29 +5,40 @@
 }
 
 :root{
-    --brand-color: #0072b0;
-    --positive-color: rgb(46, 163, 46);
+    --brand-color:#03A65A;
+    --highlight-color: #02733E;
+    --positive-color:#F2A2B8;
+    --text-color: #F2A649;
+    --contrast-color: #D9D9D9;
     --column-width: 1080px;
 }
 
 body {
-    background-color: burlywood;
+    background-color: var(--text-color);
     font-family: Helvetica , Arial , sans-serif;
     margin-inline: 2em;
 }
+
+@media (min-width:800px){
+    body {
+        max-width: 720px;
+        margin: auto;
+    }
+}
+
 h1, h3, p {
     margin: 0;
 }
 .header-title{
     text-align: center;
     text-transform: uppercase;
-    color: antiquewhite;
+    color: var(--text-color)
 }
 
 form{
     display: flex;
     flex-direction: column;
-    color: gray;
+    color: var(--text-color)
 }
 
 .input-container {
@@ -39,7 +50,7 @@ form{
     left: 1.5em;
     top: 1.8em;
     transform: translateY(-50%);
-    color: burlywood;
+    color: var(--text-color);
 }
 
 form input, textarea {
@@ -52,12 +63,19 @@ form input, textarea {
 }
 
 .search{
-    border-bottom: 1px solid rgb(167, 165, 165);
+    border-bottom: 2px solid var(--contrast-color);
+    
+    border-radius: 99px;
+    margin-bottom: 1em;
+}
+
+.title-input {
     border-radius: 40px 40px 0 0;
 }
 
 .description-input {
-    border-top: 1px solid rgb(167, 165, 165);
+    border-top: 2px solid var(--text-color);
+    border-bottom: 2px solid var(--contrast-color);
     border-radius: 0 0 40px 40px;
     resize: none; 
     font-family: inherit; 
@@ -73,12 +91,17 @@ form input, textarea {
     background-color: var(--brand-color);
     color: blanchedalmond;
     text-align: center;
+    cursor: pointer;
+}
+
+.add-btn:hover {
+    background-color: var(--highlight-color);
 }
 
 .task {
     display: flex;
-    background-color: brown;
-    color: burlywood;
+    background-color: var(--highlight-color);
+    color: var(--text-color);
     margin-block: 0.5em;
     
     padding-block: .5em;
@@ -111,7 +134,7 @@ form input, textarea {
 }
 
 button:hover{
-    color: var(--brand-color);
+    color: var(--contrast-color);
 }
 
 .task-text{
@@ -133,9 +156,9 @@ button:hover{
     overflow: hidden;
     box-shadow: 0px 0px 0px 2px burlywood;
     margin-inline-start: .5em;
-  }
-  
-  .checkBox div {
+}
+
+.checkBox div {
     width: 60px;
     height: 60px;
     background-color: burlywood;
@@ -144,19 +167,24 @@ button:hover{
     position: absolute;
     transform: rotateZ(45deg);
     z-index: 100;
-  }
-  
-  .checkBox input[type=checkbox]:checked + div {
+}
+
+.checkBox input[type=checkbox]:checked + div {
     left: -10px;
     top: -10px;
-  }
-  
-  .checkBox input[type=checkbox] {
+}
+
+.checkBox input[type=checkbox] {
     position: absolute;
     left: 50px;
     visibility: hidden;
-  }
-  
-  .transition {
+}
+
+.transition {
     transition: 300ms ease;
-  }
+}
+
+.hidden {
+    display: none;
+}
+  
