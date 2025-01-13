@@ -15,18 +15,27 @@
 body {
     font-family:  'Courier New', Courier, monospace;
     background-color: var(--cream);
-    text-align: center;
-
 }
 
+header {
+    text-align: center;
+    margin-block-end: 2em;
+    margin-block-start: 1em;
+}
 
 main {
     border: 3px solid;
     margin-inline: 5em;
-    width: 30%;
+    width: 35%;
     margin: auto;
     border-radius: 9px;
+    padding-block: 1em;
+    text-align: end;
+    justify-items: center;
+}
 
+h1, h3, p {
+    margin: 0;
 }
 
 .timezone {
@@ -36,4 +45,8 @@ main {
 
 .date {
     font-weight: 600;
+}
+
+.time {
+    font-size: 3em;
 }
