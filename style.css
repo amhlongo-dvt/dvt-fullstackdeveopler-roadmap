@@ -2,7 +2,7 @@
 
 body{
     color: aliceblue;
-    margin-top: 15%;
+    /* margin-top: 15%; */
     font-family: Arial, Helvetica, sans-serif;
     /* background-color: black; */
     background-image: url("./windows_xp_original-wallpaper-1920x1080.jpg");
@@ -95,6 +95,7 @@ body{
 
 footer {
     height: 30px;
+ 
     background: linear-gradient(rgb(31, 47, 134) 0px, rgb(49, 101, 196) 3%, rgb(54, 130, 229) 6%, rgb(68, 144, 230) 10%, rgb(56, 131, 229) 12%, rgb(43, 113, 224) 15%, rgb(38, 99, 218) 18%, rgb(35, 91, 214) 20%, rgb(34, 88, 213) 23%, rgb(33, 87, 214) 38%, rgb(36, 93, 219) 54%, rgb(37, 98, 223) 86%, rgb(36, 95, 220) 89%, rgb(33, 88, 212) 92%, rgb(29, 78, 192) 95%, rgb(25, 65, 165) 98%);
     position: absolute;
     bottom: 0px;
@@ -184,8 +185,12 @@ footer {
 }
 
 
+
+
 .windows {
-    transform: translate(20%, -20%);
+    transform: translate(20px, -80px);
+    margin-top: 6em;
+    margin-left: 7em;
     width: 660px;
     height: 500px;
     z-index: 30;
@@ -194,7 +199,10 @@ footer {
     border-top-right-radius: 9px;
     border-top-left-radius: 9px;
     border:1px solid #2838c7;
+    
 }
+
+
 
 .header-bg {
     border-top-right-radius: 8px;
