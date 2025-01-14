@@ -138,3 +138,106 @@ footer {
     font-weight: lighter;
     text-shadow: none;
 }
+
+.app-container{
+    position: absolute;
+    margin-top: 40px;
+    margin-left: 40px;
+    top: 0px;
+    z-index: -1;
+}
+
+.app {
+    width: 70px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.app > .image {
+    width: 30px;
+    height: 30px;
+}
+
+.app > .image > img {
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+}
+
+.app > .text {
+    width: 100%;
+    font-size: 10px;
+    color: white;
+    text-shadow: black 0px 1px 1px;
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.app > .text > p{
+   padding: 0px 3px 2px;
+   background-color: transparent;
+   text-align: center;
+   flex-shrink: 1;
+}
+
+
+.windows {
+    transform: translate(20%, -20%);
+    width: 660px;
+    height: 500px;
+    z-index: 30;
+    cursor: auto;
+    background-color:white;
+    border-top-right-radius: 9px;
+    border-top-left-radius: 9px;
+    border:1px solid #2838c7;
+}
+
+.header-bg {
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    background: linear-gradient(rgb(0, 88, 238) 0%, rgb(53, 147, 255) 4%, rgb(40, 142, 255) 6%, rgb(18, 125, 255) 8%, rgb(3, 111, 252) 10%, rgb(2, 98, 238) 14%, rgb(0, 87, 229) 20%, rgb(0, 84, 227) 24%, rgb(0, 85, 235) 56%, rgb(0, 91, 245) 66%, rgb(2, 106, 254) 76%, rgb(0, 98, 239) 86%, rgb(0, 82, 214) 92%, rgb(0, 64, 171) 94%, rgb(0, 48, 146) 100%);
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    height: 28px;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.window-header {
+    display: flex;
+    height: 25px;
+    line-height: 25px;
+    font-weight: 700;
+    font-size: 12px;
+    font-family: 'Noto Sans';
+    text-shadow: rgb(0, 0, 0) 1px 1px;
+    color: white;
+    position: absolute;
+    left: 3px;
+    right: 3px;
+    align-items: center;
+}
+
+.window-header > img {
+    width: 15px;
+    height: 15px;
+    margin-left: 1px;
+    margin-right: 3px;
+}
+
+.window-header>p{
+    font-family: sans-serif;
+    flex: 1 1 0%;
+    pointer-events: none;
+    padding-right: 5px;
+    letter-spacing: 0.5px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
