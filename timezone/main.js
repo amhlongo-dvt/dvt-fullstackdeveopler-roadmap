@@ -1,6 +1,7 @@
+import micromodal from "https://cdn.skypack.dev/micromodal@0.4.6";
 
 
-MicroModal.init();
+micromodal.init();
 dayjs.extend(window.dayjs_plugin_utc)
 dayjs.extend(window.dayjs_plugin_timezone)
 
@@ -17,7 +18,6 @@ const popularTimezones = [
     'Asia/Tokyo',        
     'Australia/Sydney',   
     'Pacific/Auckland',
-
 ];
 
 
@@ -39,16 +39,20 @@ function renderTime(){
 }
 
 function showModal(){
-    MicroModal.show('modal-1')   
+    micromodal.show('modal-1')   
 }
 
+
+document.querySelector('.timezone-btn').addEventListener("click", ()=>{
+    showModal()
+})
 
 timeSelect.onchange=()=>{
   clearInterval(interval)
   timezone.textContent = timeSelect.value
   date.textContent = dayjs().tz(timeSelect.value).format('dddd D MMMM, YYYY')
   interval = interval = setInterval(function () {time.textContent = dayjs().tz(timeSelect.value).format('HH:mm:ss');}, 1000);
-  MicroModal.close('modal-1')   
+  micromodal.close('modal-1')   
 
 }
 
