@@ -6,7 +6,11 @@ const follower  = document.getElementById("followers")
 const name = document.querySelector(".profile-name")
 const bio = document.querySelector(".profile-bio")
 const userLocation = document.querySelector(".profile-location")
+const repoContainer = document.querySelector(".repos-container")
 const image = document.querySelector("img")
+
+const temp = document.getElementsByTagName("template")[0]
+
 
 async function getUserDetails() {
     const formData =  new FormData(form);
@@ -17,7 +21,7 @@ async function getUserDetails() {
       if (!response.ok) {
         throw new Error(`Response status: ${response.status}`);
       }
-      
+      repoContainer.innerHTML = ""
       const json = await response.json();
       console.log(json);
       
@@ -36,7 +40,39 @@ async function getUserDetails() {
     }
 }
 
+async function getRepos() {
+  const formData =  new FormData(form);
+  const username = formData.get("username")
+  const url = "https://api.github.com/users/" + username+"/repos";
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`Response status: ${response.status}`);
+    }
+    
+    const json = await response.json();
+    // console.log(json);
+
+    for (let index = 0; index < json.length; index++) {
+      if(index > 5){
+        break
+      }
+      const element = json[index];
+      const clone = temp.content.cloneNode(true)
+      clone.querySelector("h3").textContent = element.name
+      clone.querySelector("span").textContent = element.stargazers_count
+      clone.querySelector(".subtitle").textContent = element.description
+      repoContainer.appendChild(clone)
+    }
+    
+  } catch (error) {
+    console.error(error.message);
+  }
+}
+
+
 form.addEventListener("submit", (event) => {
     event.preventDefault()
     getUserDetails()
+    getRepos()
 })

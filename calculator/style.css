@@ -1,0 +1,88 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+main{
+    box-shadow: 3px 3px 10px rgb(139, 139, 139);
+    border-radius: 9px;
+    background-color: rgb(229, 229, 229);
+    max-width: 250px;
+    align-self: center;
+    justify-self: center;
+    
+}
+
+body{
+    font-family: ui-sans-serif,system-ui,Helvetica Neue,Arial,Noto Sans,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji";
+    justify-content: center;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    /* margin-inline: 18em; */
+    background-color:rgb(174, 174, 174);
+}
+
+header{
+    text-align: center;
+}
+
+.display {
+    /* background-color:aqua; */
+    padding-block-start: 2em;
+    text-align: end;
+    padding-inline: .8em;
+    margin-block-end: .8em;
+}
+
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* background-color: blue; */
+    padding-block-end: 1em;
+}
+
+.button {
+    margin: .1em;
+    /* flex: 1 0 150px; */
+    font-size: 1.1em;
+    text-align: center;
+    /* background-color: blanchedalmond; */
+}
+
+.button > button {
+    height: 3em;
+    width: 3em;
+    font-size: 1em;
+    border-radius: 99px;
+    border: none;
+}
+
+.button > button:hover {
+    border: 2px solid;
+    cursor: pointer;
+}
+
+
+.answer {
+    font-size: 2em;
+    font-weight: 450;
+    margin-block-end: .3em;
+    overflow: hidden;
+}
+
+.light > button {
+    background-color: rgb(207, 207, 207);
+}
+
+.dark > button {
+    background-color: rgb(162, 162, 162);
+}
+
+.red > button {
+    background-color: rgb(223, 52, 52);
+    color: aliceblue;
+}
