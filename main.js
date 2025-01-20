@@ -30,7 +30,7 @@ function hideLoader(){
 }
 
 
-setTimeout(hideLoader, 1000)
+setTimeout(hideLoader, 10000)
 
 loadHTML("./portfolio/index.html", "window-content")
 
