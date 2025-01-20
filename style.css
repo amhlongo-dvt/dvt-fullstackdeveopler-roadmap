@@ -45,7 +45,7 @@ body{
   .logo {
     width: 220px;
     margin: 50px auto;
-    margin-top: 20px;
+    margin-top: 30px;
   }
   
   .logo p {
@@ -94,7 +94,7 @@ body{
     }
   
     100% {
-      transform: translate(150px);
+      transform: translate(300px);
     }
   }
   
@@ -194,14 +194,14 @@ footer {
 
 
 .windows {
-    transform: translate(20px, -80px);
-    margin-top: 6em;
-    margin-left: 7em;
+    position: fixed;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 1px 1px 4px rgba(0,0,0,0,0.9), -1px 1px 4px rgba(0,0,0,0,0.9);
+    background: #fff;
     width: 660px;
     height: 500px;
-    z-index: 30;
-    cursor: auto;
-    background-color:white;
+    cursor: move;
     border-top-right-radius: 9px;
     border-top-left-radius: 9px;
     border:1px solid #2838c7;
@@ -261,4 +261,47 @@ footer {
     width: 100%;
     height: 100%;
     margin-top: 1.7em;
+}
+
+
+.button {
+  margin-right: 1px;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 3px;
+}
+
+.button>i{
+  color: white;
+  position: relative;
+  right:3px;
+}
+
+.fa-xmark{
+  padding-left: .1px;
+  font-size: 1.2em;
+}
+
+.blue {
+	background-image: radial-gradient(circle at 90% 90%, rgb(0, 84, 233) 0%, rgb(34, 99, 213) 55%, rgb(68, 121, 228) 70%, rgb(163, 187, 236) 90%, white 100%);
+  
+}
+
+
+.red {
+	cursor: pointer;
+	background-color: red;
+  box-shadow: red 0px -1px 2px 1px inset;
+}
+
+#myWindow2 {
+	top: 0;
+	left: 500px;
+}
+
+
+.button-container{
+  margin-top: 0;
 }
