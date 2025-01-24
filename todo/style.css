@@ -5,12 +5,13 @@
 }
 
 :root{
-    --brand-color:#03A65A;
-    --highlight-color: #02733E;
-    --positive-color:#F2A2B8;
-    --text-color: #F2A649;
-    --contrast-color: #D9D9D9;
+    --brand-color:#7cae7a;
+    --highlight-color: #F2A649;
+    --positive-color:#6E6362;
+    --text-color: #394053;
+    --contrast-color: #4E4A59;
     --column-width: 1080px;
+    --border-radius: 7px;
 }
 
 body {
@@ -65,18 +66,18 @@ form input, textarea {
 .search{
     border-bottom: 2px solid var(--contrast-color);
     
-    border-radius: 99px;
+    border-radius: var(--border-radius);
     margin-bottom: 1em;
 }
 
 .title-input {
-    border-radius: 40px 40px 0 0;
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
 }
 
 .description-input {
     border-top: 2px solid var(--text-color);
     border-bottom: 2px solid var(--contrast-color);
-    border-radius: 0 0 40px 40px;
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
     resize: none; 
     font-family: inherit; 
     overflow-y: auto;
@@ -86,18 +87,36 @@ form input, textarea {
 
 
 .add-btn {
+    margin: unset;
+    padding: unset;
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    width: 35px;
+    height: 35px;
     margin-block-start: 0.275em;
-    border-radius: 99px;
+    border-radius: var(--border-radius);
     background-color: var(--brand-color);
     color: blanchedalmond;
     text-align: center;
+    /* align-items: center; */
     cursor: pointer;
+    font-weight: 500;
+    font-size: 1.3em;
 }
 
 .add-btn:hover {
     background-color: var(--highlight-color);
 }
 
+
+.tasks-header{
+    text-align: center;
+    font-size: 1.5em;
+    margin-block-start: 1em;
+    color: var(--brand-color);
+  
+}
 .task {
     display: flex;
     background-color: var(--highlight-color);
@@ -106,7 +125,7 @@ form input, textarea {
     
     padding-block: .5em;
     padding-inline: 1em;
-    border-radius: 99px;
+    border-radius: var(--border-radius);
 }
 
 .task-button {
@@ -126,7 +145,7 @@ form input, textarea {
 }
 
 .task-container {
-    margin-block-start: 1em;
+    margin-block-start: .5em;
 }
 
 .fa-solid {
