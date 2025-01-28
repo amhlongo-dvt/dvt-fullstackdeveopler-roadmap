@@ -101,7 +101,6 @@ h1, h3, p {
   max-width: 500px;
   max-height: 100vh;
   border-radius: 4px;
-  overflow-y: auto;
   border: 3px solid;
 }
 

@@ -33,27 +33,26 @@ popularTimezones.forEach((e)=>{
 })
 
 function renderTime(){
-    timezone.textContent = dayjs.tz.guess()
-    date.textContent = dayjs().format('dddd D MMMM, YYYY')
+    timezone.textContent = dayjs.tz.guess();
+    date.textContent = dayjs().format('dddd D MMMM, YYYY');
     interval = setInterval(function () {time.textContent = dayjs().format('HH:mm:ss');}, 1000);
 }
 
 function showModal(){
-    micromodal.show('modal-1')   
+    micromodal.show('modal-1');
 }
 
 
 document.querySelector('.timezone-btn').addEventListener("click", ()=>{
-    showModal()
+    showModal();
 })
 
 timeSelect.onchange=()=>{
-  clearInterval(interval)
-  timezone.textContent = timeSelect.value
-  date.textContent = dayjs().tz(timeSelect.value).format('dddd D MMMM, YYYY')
+  clearInterval(interval);
+  timezone.textContent = timeSelect.value;
+  date.textContent = dayjs().tz(timeSelect.value).format('dddd D MMMM, YYYY');
   interval = interval = setInterval(function () {time.textContent = dayjs().tz(timeSelect.value).format('HH:mm:ss');}, 1000);
-  micromodal.close('modal-1')   
+  micromodal.close('modal-1');
 
 }
-
-renderTime()
+renderTime();
