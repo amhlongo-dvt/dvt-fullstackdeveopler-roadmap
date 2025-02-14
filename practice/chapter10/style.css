@@ -1,0 +1,105 @@
+@layer reset, layout, modules;
+
+@layer base {
+    img {
+        display: block;
+        max-width: 100%;
+    }
+}
+
+@layer layout {
+    .l-page {
+        margin-inline: 1rem;
+    }
+
+    .l-page > * {
+        container: layout/inline-size;
+    }
+
+    @media (min-width: 800px) {
+        .l-page {
+            display: grid;
+            grid-template-columns: 1fr 30%;
+            gap: 1rem;
+        }
+    }
+
+    .l-page > aside {
+        --sidebar: true;   
+    }
+}
+
+@layer modules {
+    .media {
+        padding: 1.5rem;
+        background-color: #eee;
+        border-radius: 0.5rem;
+    }
+    .media__image {
+        margin-inline: auto;
+    }
+    .media__body {
+        container: layout/inline-size;
+        flex-grow: 1;
+    }
+    @container layout (width >= 470px) {
+        .media {
+            display: flex;
+            gap: 1.5rem;
+        }
+        .media__image {
+            align-self: start;
+            margin-inline: revert;
+        }
+    }
+
+    .race-grid {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: 3fr 3fr;
+        grid-auto-rows: 1fr;
+        gap: 1rem;
+    }
+
+    .race-grid > :nth-child(3n -1) {
+        grid-row: span 2;
+    }
+
+    .race-detail{
+        container: layout/inline-size;
+        border: 1px solid #ccc;
+    }
+
+    .race-detail > img {
+        inline-size: 100%;
+        max-block-size: 30cqi;
+        object-fit: cover;
+    }
+
+    .race-detail__body {
+        padding: 1rem 1.5rem;
+    }
+
+    .race-detail__body > h3 {
+        font-size: clamp(1.rem, 3.5cqi, 1.8rem);
+    }
+
+    @container style(--sidebar: true) {
+        .race-detail {
+            margin-block-end: 1em;
+            display: flex;
+            margin-block-start: .5em;
+        }
+
+        .race-detail > img {
+            flex: 0 0 30cqi;
+            margin-block-start: .5em;
+            margin-inline-start: .5em;
+            border-radius: 0.5em;
+        }
+
+        .race-detail__body > h3 {
+            margin-block-start: 0;
+        }
+    }
+}

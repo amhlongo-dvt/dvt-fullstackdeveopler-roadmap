@@ -19,12 +19,12 @@ async function addTask() {
         window.alert("Please enter a title")
         return
     }
-    if(addButton.value== "Edit"){
+    if(addButton.value== "-"){
         const id = Number(form.getAttribute("id"))
         const task = task_list.at(id)
         task.title = formData.get("title") 
         task.description = formData.get("description") 
-        addButton.value = "Add"
+        addButton.value = "+"
     }else{     
         let task = {
             title: formData.get("title"),
@@ -52,7 +52,7 @@ function editTask(index){
     let  selectedTask = task_list.at(index)
     titleInput.value = selectedTask.title
     descriptionInput.value = selectedTask.description
-    addButton.value = "Edit"
+    addButton.value = "-"
     form.setAttribute("id", index)
 }
 
