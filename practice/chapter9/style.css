@@ -137,6 +137,7 @@
             color: #2b74b9;
     }
 }
+}
 
 @layer modules {
     @scope (.dropdown) {
