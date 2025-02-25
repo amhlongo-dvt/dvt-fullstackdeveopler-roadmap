@@ -73,3 +73,95 @@
     }
 }
 
+@layer modules {
+    .nav-container {
+        background-color: var(--medium-green);
+    }
+
+    .nav-container__inner {
+        display: flex;
+        justify-content: space-between;
+        max-inline-size: 1080px;
+        margin-inline: auto;
+        /* align-items: center; */
+    }
+
+    .home-link {
+        color: var(--text-color);
+        font-size: 1.6em;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .top-nav {
+        display: flex;
+        list-style-type: none;
+    }
+
+    .top-nav a {
+        display: block;
+        padding: 0.3em 1.25em;
+        color: var(--white);
+        background-color: var(--brand-green);
+        text-decoration: none;
+        border-radius: 3px;
+    }
+
+    .top-nav a:hover {
+        color: var(--brand-green);
+        background-color: var(--white);
+    }
+
+    .top-nav__featured > a {
+        color: var(--brand-green);
+        background-color: var(--white);
+    }
+
+    .top-nav__featured  > a:hover {
+        color: var(--medium-green);
+        background-color: var(--white);
+    }
+}
+
+
+@layer modules {
+    .hero {
+        background-image: url("./collaboration.jpg");
+        background-size: cover;
+        margin-block-end: 40px;
+    }
+
+    .hero__inner{
+        max-inline-size: 1080px;
+        margin-inline: auto;
+        padding-block: 50px 200px;
+        text-align: end;
+    }
+
+    .hero h2 {
+        font-size: 1.95em;
+    }
+
+    .button {
+        display: inline-block;
+        padding: 0.4em 1em;
+        color: var(--brand-green);
+        border: 2px solid var(--brand-green);
+        border-radius: 0.2em;
+        text-decoration: none;
+        font-size: 1rem;
+    }
+
+    .button:hover {
+        background-color: var(--dark-green);
+        color: var(--white);
+    }
+
+    .button--cta {
+        padding: 0.6em 1em;
+        background-color:  var(--brand-green);
+        color: var(--white);
+        border: none;
+    }
+}
