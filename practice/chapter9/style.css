@@ -94,71 +94,90 @@
 }
 
 @layer modules {
-    .media {
-        display: flex;
-        gap: 1.5em;
-        padding: 1.5em;
-        background-color: #eee;
-        border-radius: 5px;
-    }
-
-    .media__image {
-        align-self: start;
-    }
-
-    .media__body {
-        overflow: auto;
-        margin-block-start: 0;
-    }
-
-    .media_body > h4 {
-        margin-block-start: 0;
-        color: #333;
-    }
-
-    .media--right {
-        flex-direction: row-reverse;
+    @scope (.media) {
+        :scope {
+            display: flex;
+            gap: 1.5em;
+            padding: 1.5em;
+            background-color: #eee;
+            border-radius: 5px;
+        }
+    
+        :scope.right {
+            flex-direction: row-reverse;
+        }
+        img {
+            align-self: start;
+        }
+    
+        .body {
+            overflow: auto;
+            margin-block-start: 0;
+        }
+    
+        h4 {
+            margin-block-start: 0;
+            color: #333;
+        }
+    
     }
 }
 
 @layer modules {
-    .dropdown {
-        display: inline-block;
-        position: relative;
-    }
+    @scope (.hightlight-block) to (.slot) {
+        :scope {
+            padding: 1em 1.5em;
+            background-color: #b3cbe6;
+        }
 
-    .dropdown__toggle {
-        padding: 0.5em 2em 0.5em 1.5em;
-        border: 1px solid #ccc;
-        font-size: 1rem;
-        background-color: #eee;
+        h1,
+        h2,
+        h3,
+        h4 {
+            color: #2b74b9;
     }
+}
 
-    .dropdown__toggle::after{
-        content: "";
-        position: absolute;
-        right: 1em;
-        top: 1em;
-        border: 0.3em solid;
-        border-color: black transparent transparent;
-    }
-
-    .dropdown__drawer {
-        display: none;
-        position: absolute;
-        left: 0;
-        top: 2.1em;
-        min-width: 100%;
-        background-color: #eee;
-    }
-
-    .dropdown.is-open .dropdown__toggle::after{
-        top: 0.7em;
-        border-color:  transparent transparent black;
-    }
-
-    .dropdown.is-open .dropdown__drawer {
-        display: block;
+@layer modules {
+    @scope (.dropdown) {
+        :scope {
+            display: inline-block;
+            position: relative;
+        }
+    
+        .toggle {
+            padding: 0.5em 2em 0.5em 1.5em;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+            background-color: #eee;
+        }
+    
+        .toggle::after{
+            content: "";
+            position: absolute;
+            right: 1em;
+            top: 1em;
+            border: 0.3em solid;
+            border-color: black transparent transparent;
+        }
+    
+        .drawer {
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 2.1em;
+            min-width: 100%;
+            background-color: #eee;
+        }
+    
+        :scope.is-open .toggle::after{
+            top: 0.7em;
+            border-color:  transparent transparent black;
+        }
+    
+        :scope.is-open .drawer {
+            display: block;
+        }
     }
 }
 

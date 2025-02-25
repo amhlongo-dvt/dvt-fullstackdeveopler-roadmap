@@ -16,21 +16,28 @@
     <button class="button button--large">Read more</button>
     <button class="button button--success">Save</button>
     <button class="button button--danger button--small">cancel</button>
-    <div class="media ">
-        <img src="blob.jfif" class="media__image" 
-        alt="Silhouette of a person running">
-        <div class="media__body ">
-            <h4>Strength</h4>
-            <p>
-                Strength training is an important part of
-                injury prevention. Focus on your core&mdash;
-                especially your abs and glutes
-            </p>
+    <div class="hightlight-block">
+        <h4>Running Tips</h4>
+        <p>
+            Here are some tips to stay healthy while training 
+            and improve your running performance.
+        </p>
+        <div class="media slot">
+            <img src="blob.jfif" class="media__image" 
+            alt="Silhouette of a person running">
+            <div class="body">
+                <h4>Strength</h4>
+                <p>
+                    Strength training is an important part of
+                    injury prevention. Focus on your core&mdash;
+                    especially your abs and glutes
+                </p>
+            </div>
         </div>
     </div>
     <div class="dropdown">
-        <button class="dropdown__toggle">Main Menu</button>
-        <div class="dropdown__drawer">
+        <button class="toggle">Main Menu</button>
+        <div class="drawer">
             <ul class="menu">
                 <li><a href="/">Home</a></li>
                 <li><a href="/">Coffees</a></li>
@@ -42,7 +49,7 @@
     </div>
 
     <script type="module">
-        var toggle = document.querySelector('.dropdown__toggle');
+        var toggle = document.querySelector('.toggle');
         toggle.addEventListener('click', function (event) {
             event.preventDefault();
             var dropdown = event.target.parentNode;
