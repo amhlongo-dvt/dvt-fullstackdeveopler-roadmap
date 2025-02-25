@@ -1,0 +1,75 @@
+@layer reset, theme, global, layout, modules, utility;
+
+@layer reset {
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: unset;
+    }
+
+    button,
+    input,
+    textarea,
+    select {
+        font: inherit;
+    }
+
+    img,
+    picture,
+    svg,
+    canvas {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@layer theme {
+    :root {
+        --brand-green: #076448;
+        --dark-green: #099268;
+        --medium-green: #20c997;
+        --text-color: #212529;
+        --gray: #868e96;
+        --light-gray: #f1f3f5;
+        --extra-light-gray: #f8f9fa;
+        --white: #fff;
+    }
+}
+
+@layer global {
+    body {
+        font-family: Helvetica, Arial, sans-serif;
+        line-height: 1.4;
+        background-color: var(--extra-light-gray);
+        color: var(--text-color);
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+        font-family: Georgia, serif;
+    }
+
+    a{
+        color: var(--medium-green);
+    }
+
+    a:visited {
+        color: var(--brand-green);
+    }
+
+    a:hover {
+        color: var(--brand-green);
+    }
+
+    a:active {
+        color: var(--red);
+    }
+}
+
