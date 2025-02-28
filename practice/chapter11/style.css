@@ -50,6 +50,10 @@
         color: var(--text-color);
     }
 
+    p {
+      margin-block: 1.5em;  
+    }
+
     h1,
     h2,
     h3,
@@ -84,7 +88,7 @@
         justify-content: space-between;
         max-inline-size: 1080px;
         margin-inline: auto;
-        /* align-items: center; */
+        padding: 0.685em;
     }
 
     .home-link {
@@ -98,6 +102,8 @@
     .top-nav {
         display: flex;
         list-style-type: none;
+        margin: unset;
+        gap: 0.625em;
     }
 
     .top-nav a {
@@ -136,11 +142,14 @@
     .hero__inner{
         max-inline-size: 1080px;
         margin-inline: auto;
-        padding-block: 50px 200px;
-        text-align: end;
+        padding-block: 89px;
+        padding-inline-end: 12.5em;
+        min-block-size: 40svh;
+        text-align: right;
     }
 
     .hero h2 {
+        margin-block: 0 10px;
         font-size: 1.95em;
     }
 
@@ -175,6 +184,7 @@
 
     .tile-row{
         display: flex;
+        gap: 25px;
     }
 
     .tile-row > * {
@@ -184,8 +194,29 @@
     .tile {
         background-color: var(--white);
         border-radius: 0.3em;
+        padding: 1.5625em;
     }
 
+    .tile > h4 {
+        margin-block: 0 1.5em;
+    }
+
+}
+
+@layer modules {
+    .tag-list {
+        list-style: none;
+        padding-inline-start: unset;
+    }
+
+    .tag-list > li {
+        display: inline;
+        padding: 0.3rem 0.5rem;
+        font-size: 0.8rem;
+        border-radius: 0.2rem;
+        background-color: var(--light-gray);
+        line-height: 2.6;
+    }
 }
 
 @layer modules{
